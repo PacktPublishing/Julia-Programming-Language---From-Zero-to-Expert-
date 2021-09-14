@@ -1,0 +1,580 @@
+WEBVTT
+
+00:01.540 --> 00:05.470
+Now that we've set up our environment, we can go ahead and start working with the actual language.
+
+00:05.590 --> 00:09.460
+We'll take a look at the basics of the language and then move on to the more advanced topics.
+
+00:09.820 --> 00:15.610
+You can follow the tutorial by typing all this stuff on your own in a new notebook, or you can follow
+
+00:15.610 --> 00:18.650
+along using the notebooks that are provided with discourse.
+
+00:19.630 --> 00:25.360
+So let's start off with the basic definition of a variable so we can go ahead and say awesome variable
+
+00:25.360 --> 00:26.320
+is equal to twenty five.
+
+00:26.320 --> 00:27.640
+So that defines a variable.
+
+00:27.640 --> 00:32.380
+As you can see, the variables are dynamically typed so you don't need to define the types, but they
+
+00:32.380 --> 00:32.980
+do have a type.
+
+00:32.980 --> 00:34.420
+And we'll take a look at that in a minute.
+
+00:34.660 --> 00:38.870
+You can take a look at the value of the variable using just awesome underscore.
+
+00:38.890 --> 00:40.320
+So that gives you twenty five.
+
+00:40.780 --> 00:46.570
+Now, one important thing that immediately differentiates Julia from almost any other programming language
+
+00:46.570 --> 00:53.170
+is that variable names themselves can be in Unicode and Julia, for instance, in Python you can define.
+
+00:54.170 --> 01:01.720
+Any variable X to hold a string which has Unicode in it, so we're using a Unicode emoji in this case,
+
+01:02.000 --> 01:05.510
+but the variable name itself in Python cannot be a Unicode.
+
+01:06.080 --> 01:08.840
+So here it's very possible to do this.
+
+01:08.840 --> 01:10.140
+So let's wait and run this.
+
+01:10.430 --> 01:13.760
+So as you can see, this is just a variable which holds this string.
+
+01:14.000 --> 01:17.240
+And if you try to output the value of this variable, it works perfectly fine.
+
+01:17.810 --> 01:19.210
+So this seems weird.
+
+01:19.220 --> 01:28.130
+And the way to type this is to go ahead and say slash colon, smite and Hattab, that is going to give
+
+01:28.130 --> 01:31.400
+you a pop up and you can select whichever smiley you want.
+
+01:31.580 --> 01:35.470
+So, for instance, if you need this, you had to enter and then you hit that again.
+
+01:36.230 --> 01:37.310
+So enter.
+
+01:38.450 --> 01:43.970
+It seems weird, but you're almost never going to use smileys in your notebooks, right?
+
+01:44.000 --> 01:44.740
+So that's weird.
+
+01:45.020 --> 01:48.740
+But in general, Julia does use Unicode variables.
+
+01:48.740 --> 01:50.750
+For instance, over here we have.
+
+01:52.020 --> 01:57.510
+Sigma, and if you want to type Sigma, you can say a sigma and hattab, and it's going to turn it into
+
+01:57.510 --> 01:58.710
+the Sigma letter.
+
+01:58.950 --> 02:05.010
+And because Julia aims to translate mathematical models into code while remaining visually similar,
+
+02:05.190 --> 02:06.210
+this is very helpful.
+
+02:06.540 --> 02:10.350
+So, for instance, if you have a mathematical formula that says Sigma is equal to two point five,
+
+02:10.440 --> 02:16.290
+you can write that exactly like Sigma is equal to 2.5 instead of having to say is equal to two point
+
+02:16.290 --> 02:19.630
+five or having to write Sigma in full.
+
+02:19.920 --> 02:26.280
+So it's really useful and it's the general practice in Julia ecosystem to actually use Unicode variable
+
+02:26.280 --> 02:26.550
+names.
+
+02:26.580 --> 02:28.440
+OK, so we'll come back to this again and again.
+
+02:28.740 --> 02:30.200
+So forget about this for a minute.
+
+02:30.510 --> 02:31.530
+This is how you type it.
+
+02:31.530 --> 02:32.840
+I copied this again.
+
+02:32.850 --> 02:34.270
+So slash call and smile.
+
+02:34.320 --> 02:40.340
+And then here you hattab, you get a dropdown, you enter that completes it and then hattab again and
+
+02:40.350 --> 02:40.800
+enter.
+
+02:40.800 --> 02:46.110
+And that in particular, it seems like a lot of work for emojis.
+
+02:46.110 --> 02:50.480
+But you're not going to do emojis encode the Latin Greek symbols.
+
+02:50.490 --> 02:51.240
+They're really easy.
+
+02:51.250 --> 02:53.940
+So you say slash sigma tab and you're done.
+
+02:54.120 --> 02:58.220
+OK, anyway, so we have to find this variable name over here.
+
+02:58.260 --> 03:01.980
+And if you want to take a look at its type, we can say a type of this cat.
+
+03:02.100 --> 03:02.770
+It's a string.
+
+03:03.090 --> 03:05.150
+Now, two things to notice over here.
+
+03:05.580 --> 03:08.660
+One is that this variable is just a variable.
+
+03:08.670 --> 03:10.200
+It's just a name of the variable.
+
+03:10.200 --> 03:11.520
+It happens to be an emoji.
+
+03:11.730 --> 03:14.160
+The other thing is that all variables have a type.
+
+03:14.400 --> 03:15.990
+Always they are going to have a type.
+
+03:16.170 --> 03:19.620
+And Julia is somewhere in the middle of Python and C++.
+
+03:19.890 --> 03:23.850
+It is going to have very strong types and types of hierarchies in between them.
+
+03:24.180 --> 03:29.040
+But you don't have to explicitly specify them unless you're doing optimization of the code.
+
+03:29.490 --> 03:31.460
+We'll come back to this when we get the machine learning part.
+
+03:31.500 --> 03:36.720
+You can say type of this AI and this is a character not notice the difference between words and single
+
+03:36.720 --> 03:38.370
+words in Julia and Julia.
+
+03:38.370 --> 03:45.330
+Strings are defined using words and single words are used for single characters just like C ok type.
+
+03:45.330 --> 03:49.080
+Of course A is a string we can define.
+
+03:49.080 --> 03:51.540
+Sigma is equal to one five as we just discussed.
+
+03:51.870 --> 03:54.720
+And now you can go ahead and pass this to a function.
+
+03:54.720 --> 03:56.790
+For instance, we have a square root function.
+
+03:57.000 --> 04:02.160
+We can say the square root of sigma squared is equal to obviously two point five.
+
+04:02.400 --> 04:11.250
+Another thing to note overhead is that Julia uses the Garratt symbol or this little hat symbol for exponentiation.
+
+04:11.250 --> 04:20.040
+So Sigma Squared is using GAT and not to Static's, as is with other languages we can print using the
+
+04:20.040 --> 04:20.980
+print and then function.
+
+04:21.000 --> 04:22.220
+So this is also a building.
+
+04:22.440 --> 04:25.220
+You can say a sigma is equal to Sigma and you get the value out.
+
+04:25.950 --> 04:30.810
+So this is print l.n. for printing a line, so it's slash and dominated.
+
+04:31.590 --> 04:36.270
+If you need help with any building or another function, you can say questionmark space function name
+
+04:36.270 --> 04:38.220
+and you'll get a little help regarding that.
+
+04:38.760 --> 04:41.850
+So it's giving you some examples and all the things that you can do with it.
+
+04:43.060 --> 04:50.080
+We also have integers, so an integer by default is in 64, we also have 32 bit integers will come to
+
+04:50.080 --> 04:50.260
+that.
+
+04:50.260 --> 04:53.800
+When we do type conversions, we also have real numbers.
+
+04:53.830 --> 05:00.370
+So those go into float 64 or float 32, depending on the system configuration, you can do multiple
+
+05:00.370 --> 05:00.940
+assignments.
+
+05:01.450 --> 05:05.740
+So I understand that I'm going a little quickly, but hopefully this will be very clear for you.
+
+05:05.740 --> 05:10.270
+But because this is really basic stuff, if you have any questions, please do feel free to ask questions
+
+05:10.990 --> 05:16.330
+so we can have a common musical Tutankhamen 20, then goes into a and twenty goes into B.
+
+05:16.900 --> 05:20.020
+We also have another data type, which is the literal type.
+
+05:20.020 --> 05:26.710
+So you can say Colon four and this is going to be and in 64 because Colon four is the same as for Colon
+
+05:26.710 --> 05:29.680
+B is the same as B, and that is not a string.
+
+05:29.680 --> 05:30.610
+That is not a character.
+
+05:30.610 --> 05:32.040
+That is what is called a symbol.
+
+05:32.440 --> 05:38.440
+So if you try to print this out, if you say Prindle and B, it's going to print some of that weird
+
+05:38.440 --> 05:38.680
+stuff.
+
+05:38.680 --> 05:38.840
+Right.
+
+05:38.860 --> 05:44.890
+So this is not the aski B, this is not the string B, not unique.
+
+05:44.890 --> 05:47.440
+Or B, it's just a symbol which you can use.
+
+05:47.680 --> 05:51.610
+It has specific certain purposes that we'll get to when we try to apply this concept.
+
+05:51.670 --> 05:56.710
+Just take note of this syntax that you can have a colon and then a string of characters so you can say
+
+05:56.710 --> 05:58.720
+best and that will be a symbol.
+
+05:58.930 --> 06:01.030
+And you cannot say Bess's is equal to 34.
+
+06:01.030 --> 06:01.220
+Right.
+
+06:01.240 --> 06:02.800
+So that is a an error.
+
+06:02.810 --> 06:04.570
+So best itself is not a variable.
+
+06:04.750 --> 06:07.930
+It's an actual value of that makes sense.
+
+06:08.200 --> 06:13.120
+Just as for the digit four is a little type best is now aleatoric type as well.
+
+06:13.380 --> 06:13.610
+OK.
+
+06:14.620 --> 06:20.110
+OK, let's wait and do some basic arithmetic so we can do and we have addition, subtraction, multiplication,
+
+06:20.110 --> 06:25.210
+division and modulars so they do what you would expect them to do.
+
+06:25.390 --> 06:30.640
+So three plus five is eight, three minus one is two, three to four is twelve because we don't have
+
+06:30.640 --> 06:31.840
+any spaces in between them.
+
+06:32.650 --> 06:36.130
+We have to put spaces like that to differentiate them.
+
+06:36.580 --> 06:41.290
+Superintendent does not insert spaces in between different characters as it does in Python.
+
+06:41.560 --> 06:48.010
+OK, we can output strings so there is no gap in between these two things we can possibly list.
+
+06:48.220 --> 06:52.960
+So a list and Julia is just like it is in Python, so comma separated square brackets.
+
+06:53.320 --> 06:54.960
+And that is going to open this over here.
+
+06:55.750 --> 06:57.370
+Not as one very important thing over here.
+
+06:57.730 --> 07:03.420
+Three plus five, they are both integers and when you add them together, you get an integer out.
+
+07:03.550 --> 07:05.500
+But this is saying eight point zero.
+
+07:06.010 --> 07:12.040
+The reason for that is the lists that you create in Julia are going to be typed.
+
+07:12.160 --> 07:15.520
+The type of the whole list is going to be a particular type.
+
+07:15.760 --> 07:21.280
+Julia does what is called a promotion, so if you have any float in the list, everything is going to
+
+07:21.280 --> 07:22.650
+be converted into a float.
+
+07:22.660 --> 07:26.110
+So this three by five leads to zero point six, which is a float.
+
+07:26.290 --> 07:29.050
+And because of that, the whole list is converted into a float.
+
+07:29.350 --> 07:32.830
+An easier example for that is one comma, Tucumán 4.0.
+
+07:33.040 --> 07:37.210
+And the type of this is going to be an array, which is what Julia calls lists.
+
+07:37.630 --> 07:43.060
+And in the array, the type of values for all the elements is flawed.
+
+07:43.060 --> 07:45.600
+64, and it's a one dimensional eddy.
+
+07:46.000 --> 07:47.920
+So it's one dimensional, as you can see.
+
+07:48.280 --> 07:51.220
+And the type of all the elements is stored 64.
+
+07:51.220 --> 07:53.170
+That is how Julia works.
+
+07:53.410 --> 07:55.690
+It gives a specific time to a list.
+
+07:55.690 --> 07:59.200
+And the reason for that is it improves the performance by a lot.
+
+07:59.410 --> 07:59.710
+OK.
+
+08:00.720 --> 08:06.060
+Just something to keep in mind, Brent does the same thing as Brent Allen, except it does not output
+
+08:06.060 --> 08:11.160
+a new line at the end four divided by two over here is an integer division.
+
+08:11.170 --> 08:17.250
+So three by five is an integer division that results in zero point six, but four double slash two is
+
+08:17.250 --> 08:18.260
+actually a fraction.
+
+08:18.270 --> 08:20.790
+So this is a rational which is built into Julia.
+
+08:20.790 --> 08:23.520
+So four by two is the fraction, two by one.
+
+08:23.910 --> 08:27.870
+You can actually add fractions and get results in actual fractions output.
+
+08:28.350 --> 08:33.720
+So this is not going to be any precision loss because this is actually irrational number and you have
+
+08:33.720 --> 08:34.800
+built in support for nationals.
+
+08:34.800 --> 08:41.310
+And Julia, we can go ahead and convert the data types among each other so I can convert an integer
+
+08:41.940 --> 08:43.460
+to an integer 64.
+
+08:43.470 --> 08:47.190
+So one goes into that, I can convert it into a flawed 64.
+
+08:47.190 --> 08:51.300
+So 1.0, I can convert one point three into an integer 64.
+
+08:51.300 --> 08:54.890
+And that is going to give me an error because this point three cannot be discarded.
+
+08:55.230 --> 08:59.190
+You'll either have to seal it first or round it first and then go ahead and convert.
+
+08:59.550 --> 09:01.520
+OK, so that is the basic conversion.
+
+09:01.710 --> 09:06.000
+We do have to do a lot of different conversion things that we'll get to later on in the course.
+
+09:06.870 --> 09:07.910
+We have boolean operators.
+
+09:08.220 --> 09:10.490
+So if you have two values over here, Walti is true.
+
+09:10.500 --> 09:17.550
+Well, if it's false and is using two ampersand science so true and false is false or is using two pipe
+
+09:17.550 --> 09:20.340
+symbols and not is using the exclamation mark.
+
+09:20.350 --> 09:21.690
+So basic stuff.
+
+09:21.720 --> 09:22.950
+We also have string operations.
+
+09:22.950 --> 09:28.710
+So we have named John over here and the age over here, we can output them using interpolation.
+
+09:28.710 --> 09:34.830
+So wherever you have dollar and brackets in your string, they are going to be interpolated and this
+
+09:34.830 --> 09:36.770
+variable name is going to be inserted over here.
+
+09:37.110 --> 09:40.230
+So the customer's name is John, who is 35 years old.
+
+09:40.980 --> 09:41.250
+Right.
+
+09:41.580 --> 09:43.050
+So that is called string interpolation.
+
+09:43.050 --> 09:43.790
+It's very useful.
+
+09:44.550 --> 09:46.590
+We also have string concatenation.
+
+09:46.770 --> 09:49.770
+So concatenation typically is done using plus.
+
+09:49.770 --> 09:51.830
+But here it's using the multiply operator.
+
+09:52.110 --> 09:53.190
+There is a reason for that.
+
+09:53.190 --> 09:54.330
+We don't want to get into that.
+
+09:54.330 --> 09:58.580
+But this is a conscious decision to use static instead of plus.
+
+09:59.070 --> 10:00.720
+So that does the congratulation.
+
+10:00.960 --> 10:04.490
+You can also join multiple strings using the joint function.
+
+10:04.500 --> 10:09.240
+So this is a built in function and you can give it a list of strings and a delimiter.
+
+10:09.810 --> 10:13.320
+So it's going to join as one space, as two space and so on.
+
+10:13.890 --> 10:21.600
+So as one space as two and it's going to return a string to you, you can put the list outside and give
+
+10:21.600 --> 10:22.200
+it to join.
+
+10:22.200 --> 10:23.350
+And this works as well.
+
+10:23.910 --> 10:31.080
+We've already seen string repetition, so use instead of multiply, we use the get it or the heart operator
+
+10:31.590 --> 10:32.790
+so you can go ahead and do that.
+
+10:32.800 --> 10:34.630
+So this repeats the thing three times.
+
+10:34.800 --> 10:39.630
+So this is the basic data types that we have and we're going to obviously use them in detail later on
+
+10:39.630 --> 10:40.080
+in the course.
+
+10:40.080 --> 10:45.540
+But just to give you a prototype, if you were working in The Notebook, you can write, click and click
+
+10:45.540 --> 10:47.690
+on new console for notebook.
+
+10:47.910 --> 10:51.240
+This gives you a console over here, which is based on this notebook.
+
+10:51.450 --> 10:56.550
+You can drag it out over here to the site and now you can do all the experimentation over here.
+
+10:56.550 --> 11:02.850
+So you can say for and this is going to go away after you close the console so you don't have to mess
+
+11:02.850 --> 11:03.760
+up your notebook over here.
+
+11:03.960 --> 11:07.470
+So this is really good for experimentation and just taking a look at what's going on.
+
+11:07.920 --> 11:09.150
+So let's get rid of this.
+
+11:09.750 --> 11:13.410
+In the next video, we are going to take a look at how these variables can be combined using control
+
+11:13.410 --> 11:15.030
+structures such as conditions and loops.

@@ -1,0 +1,526 @@
+WEBVTT
+
+00:00.900 --> 00:05.010
+In the previous video, we started working with functions and took a look at some of the basic stuff.
+
+00:05.310 --> 00:09.520
+Now let's go ahead and take a look at another type of functions which are called anonymous functions.
+
+00:09.690 --> 00:12.070
+These are functions which do not have a name.
+
+00:12.090 --> 00:13.350
+So what good is that?
+
+00:13.770 --> 00:14.910
+So let's start with that.
+
+00:15.300 --> 00:18.550
+So these are very close to what mathematical functions are.
+
+00:18.750 --> 00:25.120
+So you posit a parameter and it's going to square it out plus two X and minus one.
+
+00:25.140 --> 00:27.510
+So this is simply an expression that the function is going to return.
+
+00:27.990 --> 00:33.630
+The problem with this is once you run it, the function is created and then it's gone because it's an
+
+00:33.630 --> 00:34.550
+anonymous function.
+
+00:35.220 --> 00:37.040
+By definition, it does not have a name.
+
+00:37.050 --> 00:38.430
+That is why it's called Anonymous.
+
+00:38.820 --> 00:42.170
+So because it does not have a name now you cannot call it right.
+
+00:42.230 --> 00:43.830
+So what good is that function then?
+
+00:43.830 --> 00:47.370
+If you cannot call it so, we'll get to why we need this in a minute.
+
+00:47.820 --> 00:50.730
+But one way to call this is this bracket.
+
+00:50.760 --> 00:55.890
+This whole stuff defines the function and then you call it just as you normally would.
+
+00:56.310 --> 01:02.130
+So this is going to be a function which is a generic function, which takes in one argument and that
+
+01:02.130 --> 01:03.440
+argument is going to be five.
+
+01:03.810 --> 01:05.630
+So five is going to go into X.
+
+01:05.640 --> 01:09.330
+So this is going to be five squared, plus two into five minus one.
+
+01:09.870 --> 01:11.750
+So this is going to be thirty four.
+
+01:11.760 --> 01:15.380
+So twenty five plus ten minus one is thirty four.
+
+01:16.020 --> 01:16.300
+Right.
+
+01:16.620 --> 01:17.580
+But why do we need this.
+
+01:18.540 --> 01:20.940
+Let's set an example and then this is going to make sense.
+
+01:21.210 --> 01:26.700
+We're going to take a look at the use of anonymous functions, as well as a couple of other concepts
+
+01:26.700 --> 01:27.930
+in this very simple example.
+
+01:28.320 --> 01:30.840
+So, for instance, we have a list of numbers over here.
+
+01:31.440 --> 01:32.550
+So we have the numbers.
+
+01:33.180 --> 01:36.960
+What we want to do is we want to filter out some of the values.
+
+01:37.230 --> 01:42.260
+For instance, we want to keep only those values, which are not multiples of three.
+
+01:42.630 --> 01:43.020
+Right.
+
+01:43.320 --> 01:46.170
+Or we want to get rid of the values which are not multiples of three.
+
+01:46.440 --> 01:46.610
+Right.
+
+01:46.710 --> 01:52.890
+So we want to, let's say, keep six and nine and get rid of everything else, or we want to get rid
+
+01:52.890 --> 01:54.970
+of six and nine and keep everything else right.
+
+01:55.020 --> 01:56.860
+So we want to apply some sort of a filter.
+
+01:57.270 --> 02:00.070
+So we already have a built in function called filter with the bank.
+
+02:00.240 --> 02:06.030
+Now, you would remember from the previous video that this means it's going to mutate our collection.
+
+02:07.110 --> 02:11.910
+How is it going to mutate, that it's going to take the collection that is going to apply some function
+
+02:11.910 --> 02:13.830
+to each element in that collection?
+
+02:14.180 --> 02:14.450
+Right.
+
+02:14.850 --> 02:18.900
+So failure to function is going to keep only those that satisfy the criteria.
+
+02:19.250 --> 02:19.550
+Right.
+
+02:19.860 --> 02:22.440
+So our criteria is going to be not multiples of three.
+
+02:22.950 --> 02:25.730
+So this function is going to have to be defined.
+
+02:25.860 --> 02:28.770
+So we're going to define a function, not multiples of three.
+
+02:29.010 --> 02:36.810
+This function takes an argument and returns true if that argument is not a multiple of three.
+
+02:36.960 --> 02:37.260
+Right.
+
+02:37.280 --> 02:37.560
+So.
+
+02:38.660 --> 02:44.390
+If three does divided fully, then it is a multiple of three, if it does not divided fully, then it's
+
+02:44.390 --> 02:45.470
+not a multiple of three.
+
+02:45.830 --> 02:47.860
+If it's not a multiple of three, return.
+
+02:47.870 --> 02:48.120
+True.
+
+02:48.740 --> 02:51.170
+So it's slightly difficult to get your head around it.
+
+02:51.320 --> 02:53.460
+But think about this and this will make sense.
+
+02:53.730 --> 02:59.570
+So we have a function that returns true if the number that you postulate is not a multiple of three.
+
+02:59.960 --> 03:00.840
+So that is the function.
+
+03:01.190 --> 03:04.060
+Now you can call this filter function on these numbers.
+
+03:04.400 --> 03:10.340
+So once we do that, we get one, two, four, five, seven, eight, three wasn't there and he was
+
+03:10.670 --> 03:12.320
+six goes away and nine goes away.
+
+03:12.500 --> 03:12.770
+Right.
+
+03:13.190 --> 03:15.740
+So the way this works is you take one.
+
+03:15.860 --> 03:19.250
+You positive this function one, module three is not equal to zero.
+
+03:19.430 --> 03:20.090
+It returns.
+
+03:20.090 --> 03:20.420
+True.
+
+03:20.690 --> 03:23.330
+And that means this is going to stay on the list.
+
+03:23.970 --> 03:28.340
+Then you pass two four five menubar six to eight six goes over here.
+
+03:28.610 --> 03:33.820
+This returns false and that means it's going to be dropped from the resulting list.
+
+03:34.280 --> 03:35.180
+So that's how this works.
+
+03:35.540 --> 03:37.670
+So you've seen it now you understand how this works.
+
+03:37.850 --> 03:40.960
+The problem that we are concerned with in this video is not filter.
+
+03:41.360 --> 03:47.360
+What we are concerned with is that this function, not multiple of three, we wanted it just for the
+
+03:47.360 --> 03:48.380
+sake of this filter.
+
+03:49.220 --> 03:53.990
+And now our filter call and this function are separated from each other.
+
+03:54.290 --> 03:59.540
+That is one problem, because now you have to go out and take a look at what is not multiple of three
+
+03:59.540 --> 04:05.030
+is the other problem is this not a multiple of three is going to remain in your memory and you're not
+
+04:05.030 --> 04:06.600
+even going to use it again.
+
+04:07.010 --> 04:11.240
+So what we want to do is we want to not have this function sitting over here.
+
+04:11.390 --> 04:15.470
+We are going to create this as an anonymous function so that it's created.
+
+04:15.470 --> 04:17.830
+And then once we've used it, it goes away.
+
+04:18.050 --> 04:18.370
+Right.
+
+04:18.680 --> 04:20.090
+So that is how we're going to do this.
+
+04:20.420 --> 04:21.970
+Let's go ahead and rewrite the filter.
+
+04:22.790 --> 04:25.640
+So these are numbers, the same numbers as we had before.
+
+04:25.850 --> 04:32.270
+And now we are going to over here not be a function name, but we are going to pass the function itself.
+
+04:32.420 --> 04:34.190
+So this is going to do the exact same thing.
+
+04:34.400 --> 04:39.290
+It's going to take numbers for each of the elements is going to apply this function.
+
+04:39.290 --> 04:42.360
+And this is the exact same function as we had over here.
+
+04:42.590 --> 04:45.230
+The only difference is that it does not have a name.
+
+04:45.560 --> 04:47.930
+It takes an argument and it returns.
+
+04:47.930 --> 04:54.470
+True, if that argument is not divided fully by three, it's the exact same function, except now it
+
+04:54.470 --> 04:55.280
+does not have a name.
+
+04:55.640 --> 04:58.670
+So once you do this, you get the exact same result.
+
+04:59.420 --> 05:01.910
+So one, two, four, five, seven, eight.
+
+05:02.240 --> 05:08.060
+The good thing with this logic now is the stuff that we are trying to filter out, the semantics of
+
+05:08.060 --> 05:13.970
+are filtering are now in the same line and this function is going to go away and it's not going to clog
+
+05:13.970 --> 05:14.690
+up our memory.
+
+05:15.110 --> 05:19.890
+So this is really useful and it's very pervasive in scientific computing, in functional programming.
+
+05:20.030 --> 05:21.410
+People do this very often.
+
+05:21.560 --> 05:23.930
+So we're going to come across anonymous functions again and again.
+
+05:24.110 --> 05:26.750
+And at first glance, this looks really complicated.
+
+05:27.020 --> 05:31.250
+But once you get used to it a little bit, this is a really good way of writing your code because it
+
+05:31.640 --> 05:36.380
+brings in your logic, your constraints and the manipulation that you're trying to do in a single line.
+
+05:36.560 --> 05:37.460
+So this is really useful.
+
+05:37.640 --> 05:39.670
+So that's the whole concept that we wanted.
+
+05:39.830 --> 05:42.670
+Let's take a look at something slightly cooler in Julia.
+
+05:42.920 --> 05:48.620
+So what we can do is because not equal to this operator itself is defined as a function.
+
+05:49.220 --> 05:50.470
+We can give it another name.
+
+05:50.720 --> 05:52.850
+So let's have the same numbers again.
+
+05:53.120 --> 06:00.010
+And we are going to define this guy over here, not equal to Simbel to be equal, do not equal to.
+
+06:00.590 --> 06:01.750
+So this is going to be really weird.
+
+06:01.880 --> 06:04.520
+I'm going to say this again, the same, but not equal.
+
+06:04.520 --> 06:07.910
+Do we are defining it as not equal to.
+
+06:08.180 --> 06:08.380
+Right.
+
+06:08.460 --> 06:09.350
+So it's the same thing.
+
+06:09.380 --> 06:10.120
+How do you write this.
+
+06:10.220 --> 06:15.950
+So you say slash any and then you hit tab and it's going to get converted automatically by the Jupiter
+
+06:16.000 --> 06:18.220
+notebook as not equal to Simbel.
+
+06:18.710 --> 06:25.040
+So you write that you get an added overhead because not equal to has already been defined in Yemen and
+
+06:25.040 --> 06:26.560
+some of the previous versions of Julia.
+
+06:26.570 --> 06:27.350
+This was not defined.
+
+06:27.350 --> 06:28.520
+So we could define it like this.
+
+06:28.760 --> 06:33.310
+But the point is this not equal to now is the same as this guy over here.
+
+06:33.590 --> 06:41.180
+So you can go ahead and rewrite your anonymous function as X maps to export industry is not equal to
+
+06:41.180 --> 06:46.760
+zero exact same thing, except now this is a lot closer to the mathematical definition that we typically
+
+06:46.760 --> 06:47.650
+see in research papers.
+
+06:47.840 --> 06:50.080
+So this is going to, again, work exactly the same.
+
+06:50.510 --> 06:54.460
+The only difference is in visual appearance of this versus this.
+
+06:54.470 --> 06:58.340
+So this is more code oriented and this is more mathematics oriented.
+
+06:59.090 --> 07:00.170
+So that was a side note.
+
+07:00.350 --> 07:04.310
+Let's go ahead and finish this video by taking a look at another operator, which is slightly lesser
+
+07:04.310 --> 07:10.820
+known because it's kind of unique to Julia and it really creates problems for people who move to Julia
+
+07:10.820 --> 07:11.680
+from other languages.
+
+07:11.690 --> 07:14.300
+So this is called the Splatting and slobbing operator.
+
+07:14.570 --> 07:18.110
+Really weird to say this, but very easy to explain using an example.
+
+07:18.110 --> 07:23.000
+So let's say you have Pringle's functionality here that takes three values and just outputs them.
+
+07:23.000 --> 07:23.270
+Right.
+
+07:23.600 --> 07:27.410
+So if you try to call Pringle's one, two, three, that works just as expected.
+
+07:27.620 --> 07:30.270
+But if your values are in a list, right.
+
+07:30.320 --> 07:35.900
+So we have values in a list, you can pass it to print values and use values and three dots.
+
+07:36.080 --> 07:37.880
+So dot, dot, dot, just three.
+
+07:38.630 --> 07:45.110
+What this is going to do is it's going to Splatt Devil's array, essentially creating three different
+
+07:45.110 --> 07:48.650
+parameters and these are going to go into A, B and C, right.
+
+07:48.920 --> 07:50.960
+So this works just like that.
+
+07:51.470 --> 07:57.110
+So if you try to parse it, just valse it's going to give you an editor because you are trying to pass
+
+07:57.110 --> 08:02.390
+a single array to this print function, which it doesn't, except it needs three arguments.
+
+08:02.870 --> 08:08.870
+But if you do the splatting that essentially unwinds the array and creates three arguments and those
+
+08:08.870 --> 08:11.900
+are bastardy function, you can also do the opposite of this.
+
+08:12.180 --> 08:19.130
+For instance, if you have add value and this expects an array, but you have the values in different
+
+08:19.130 --> 08:19.600
+variables.
+
+08:19.610 --> 08:20.990
+So if you try to do add value.
+
+08:21.080 --> 08:22.070
+This is not going to work.
+
+08:22.910 --> 08:26.900
+But you can add DataDot over here to the parameter.
+
+08:27.170 --> 08:32.810
+And once you try to do this, apples, bananas, strawberry, these are going to be slurped together
+
+08:33.050 --> 08:36.920
+and an array is going to be created that is going to pass to the collection Madewell.
+
+08:36.940 --> 08:38.460
+So this works perfectly fine.
+
+08:38.720 --> 08:44.240
+Now, I do not recommend that you try to do this yourself when you're just getting started with Julia,
+
+08:44.270 --> 08:48.850
+but you are going to come across these operators, so you should be aware of what they mean.
+
+08:49.160 --> 08:51.460
+You can actually go ahead and use this right now.
+
+08:51.470 --> 08:54.230
+So if you say A comma, B is equal to one to four.
+
+08:54.560 --> 08:55.100
+This is.
+
+08:56.370 --> 09:03.480
+Going to go there, so it takes the value of one BTX, the value of two, it's expected that in a future
+
+09:03.480 --> 09:08.580
+region of Judea you might have a comma because you would want to force or is going to hold one and is
+
+09:08.580 --> 09:13.640
+going to hold to come for but for right now, if you try to do this, you're going to get an error rate.
+
+09:13.660 --> 09:15.030
+So this is not work.
+
+09:15.780 --> 09:17.670
+So this does not work.
+
+09:17.820 --> 09:23.730
+But you have to be aware that if you try to pass three things onto two variables, this is going to
+
+09:23.730 --> 09:26.800
+be different from what you might be comfortable with in Python.
+
+09:27.240 --> 09:31.690
+So that's all the difference is that we had when you were coming to Julia.
+
+09:31.770 --> 09:33.570
+So this was a lot of syntax.
+
+09:33.780 --> 09:37.530
+I do recommend that you go through these two videos again so that you are comfortable with this.
+
+09:37.770 --> 09:42.330
+In the next video, we are going to take a look at how some of these things combine together to facilitate
+
+09:42.330 --> 09:43.110
+functional programming.

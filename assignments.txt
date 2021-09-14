@@ -1,0 +1,105 @@
+Julia Assignments 
+
+
+Section 1 
+======= 
+
+To get started, complete a simple assignment. 
+
+Install Julia as mentioned in the course videos. Then, install the "Plots" package for Julia. For this assignment, you just need to install it. We will use it in a later video. 
+
+
+Section 2 
+========= 
+
+There is one particular type in Julia that we haven't studied. This is because we won't need it in this particular course. However, if you want to work extensively in Julia, you should take a look at it at least. These are "structs". Take a look at them here: 
+
+https://docs.julialang.org/en/v1/manual/types/#Composite-Types
+
+Run the basic examples and create a couple of structs and mutable structs to get a feel of these. 
+
+(BTW, you might have noticed a lack of classes. Julia does not have classes. The closest thing to a class is the mutable struct. There is good reason for this but we won't go into that theory here.)
+
+Section 3 
+=========
+
+Task 1 
+
+Take a look at the LinearAlgebra package here: https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/
+
+There is a lot of stuff that you can do with this package that will make a wide range of problems much easier to solve. 
+
+A really good example of applied Linear Algebra can be seen here: https://julia.quantecon.org/tools_and_techniques/linear_algebra.html 
+
+
+Section 4
+======= 
+
+Task 1
+
+Create a function for fibonnaci. Look up the function if you are not aware of how it works. 
+
+Task 2
+
+Create a square root function using newton's method. Newton's method can be seen implemented in Python here: https://medium.com/@sddkal/newton-square-root-method-in-python-270853e9185d 
+
+Task 2
+
+Create a function that takes a matrix and sums over its rows or columns depending on the argument given. 
+
+Task 3
+
+Estimate Pi using Julia through Monte Carlo simulation. See a detailed exaplanation of how to do that (along with Python code) here: https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf 
+
+
+Task 4
+
+(Optional) If you have worked with Python/R, call a piece of your own Python/R code from Julia 
+
+
+
+
+Section 5 
+========= 
+
+Task 1: 
+
+Study different plot types. Basic tutorial can be seen here on the official documentation here: https://docs.juliaplots.org/latest/tutorial/ Your task is to reproduce all the plots and then experiment with different plots for some of your own data. 
+
+
+Task 2: 
+
+Take a look at the GraphRecipes library for plotting graphs. These come in handy when doind advanced machine learning and you should be able to work with them. 
+
+See examples here: https://docs.juliaplots.org/latest/graphrecipes/examples/ 
+
+
+Task 3: 
+
+Take a look at the Clustering package for Julia. Some examples for visualizing data can be seen here: https://juliastats.org/Clustering.jl/stable/kmeans.html#Examples-1 
+
+One of the most troublesome aspects of clustering is how to evaluate if your clusters are of high quality. Julia provides detailed library support for this. Take a look at the example here: https://juliastats.org/Clustering.jl/stable/validate.html 
+
+Your task is to apply any of the analysis provided in this section to the above example of clustering. This will give you a good idea about how to integrate the two aspects of clustering -- modeling and evaluation. 
+
+
+
+Section 7 
+========= 
+
+Task 1
+
+There is a very brief but useful example of Transfer Learning in the Flux model zoo. Take a look at it here: https://github.com/FluxML/model-zoo/blob/master/tutorials/transfer_learning/transfer_learning.jl 
+
+Reproduce the code on your machine (in a notebook) and see the results. This will give you a good idea about how to use Model Zoo code examples.
+
+Task 2 
+
+Pick a problem of your choice and find example in the model zoo that can help you solve it. All examples can be seen on the following links:
+
+https://github.com/FluxML/model-zoo/tree/master/text
+
+https://github.com/FluxML/model-zoo/tree/master/vision
+
+https://github.com/FluxML/model-zoo/tree/master/other
+

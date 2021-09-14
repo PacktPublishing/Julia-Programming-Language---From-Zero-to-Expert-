@@ -1,0 +1,256 @@
+WEBVTT
+
+00:01.330 --> 00:06.550
+We installed Julia in the previous video, and irrespective of whether you're on Windows, Linux or
+
+00:06.550 --> 00:08.310
+Mac, you will arrive at this prompt.
+
+00:08.560 --> 00:10.840
+This is the Julia orrible prompt.
+
+00:10.990 --> 00:14.050
+You can go ahead and say any come on over here.
+
+00:14.200 --> 00:20.470
+So X is equal to five and you can say X. You can say Brandell an X and you can work with Julia over
+
+00:20.470 --> 00:20.710
+here.
+
+00:20.890 --> 00:22.610
+But this isn't very effective.
+
+00:22.810 --> 00:27.640
+What we want to do is arrive at a notebook like environment, which you might be familiar with if you
+
+00:27.640 --> 00:28.360
+work with Python.
+
+00:28.720 --> 00:34.600
+And we want to set that up so that we can experiment with our code and learn more effectively in setting
+
+00:34.600 --> 00:35.220
+that up.
+
+00:35.230 --> 00:38.330
+We are also going to take a look at how packages are installed in Julia.
+
+00:38.620 --> 00:41.980
+So for that, we have a built in package for installing packages.
+
+00:41.980 --> 00:46.030
+We have a building package which we can import using the using commands.
+
+00:46.030 --> 00:47.710
+So you can say using p.g.
+
+00:47.800 --> 00:51.810
+So Picardy is the package that is used to install other packages in Julia.
+
+00:52.120 --> 00:57.700
+You can say Pigot add and then give it the name of the package that you want to install.
+
+00:57.730 --> 00:59.140
+So this is going to be Iulia.
+
+00:59.500 --> 01:02.860
+Iulia is the package that allows us to interact with the Jupiter Nordberg.
+
+01:02.860 --> 01:05.200
+The Jupiter notebook itself is not part of Julia.
+
+01:05.200 --> 01:06.340
+It's going to come from Python.
+
+01:06.640 --> 01:08.810
+But we'll see how to install that in just a minute.
+
+01:09.190 --> 01:15.460
+So if you say Pigot ad and in double words we say Iulia, this is going to go ahead and set up a package
+
+01:15.460 --> 01:15.880
+for you.
+
+01:16.330 --> 01:20.920
+This might take a little bit of time because it has to install and set up some of the stuff.
+
+01:20.920 --> 01:22.990
+So we'll skip ahead in time until this is done.
+
+01:23.260 --> 01:24.120
+OK, so this is done.
+
+01:24.130 --> 01:28.510
+Your output might be slightly different because I've installed Iulia before, but unless you get an
+
+01:28.510 --> 01:30.120
+error, I Julia should be installed.
+
+01:30.400 --> 01:36.670
+Now, there are other ways of adding packages so you can go into the package mode by hitting the closing
+
+01:36.670 --> 01:37.530
+square bracket.
+
+01:38.020 --> 01:41.240
+You won't see it when I enter it, but the prompt is going to change.
+
+01:41.290 --> 01:46.540
+So I'm going to hit the closing square record and you will see that the branch change is too big.
+
+01:46.870 --> 01:53.350
+Now you can simply go ahead and say ADD and Iulia or whatever else package you want to install.
+
+01:53.980 --> 01:56.580
+So if you had that, it's already installed.
+
+01:56.800 --> 01:58.720
+So you're done from the package prompt.
+
+01:58.840 --> 02:04.340
+When you have a new prompt, you can simply hit backspace and this will drop you back to the Julia prompt.
+
+02:04.400 --> 02:07.150
+OK, so that is how you install packages in Julia straightforward.
+
+02:07.480 --> 02:10.990
+You don't have to handle the command line issues as you do with PIP.
+
+02:11.030 --> 02:15.880
+OK, so to recap, this is all we've done using begi because you don't install Iulia.
+
+02:16.210 --> 02:21.540
+Once Iulia is installed, we can start using this package using the using command.
+
+02:21.760 --> 02:28.570
+So using Iulia is going to allow you to import Iulia and start using its functions will cover this in
+
+02:28.570 --> 02:30.460
+depth when we start working with Julia.
+
+02:30.460 --> 02:33.630
+But for now, we're doing this just to set up our Jupiter lab environment.
+
+02:33.640 --> 02:38.130
+So you say using Iulia and then you say Jupiter lab function call.
+
+02:38.680 --> 02:43.600
+So when you do this function call, you will get a prompt that will ask you whether you want to set
+
+02:43.600 --> 02:45.910
+up a new environment, a new python environment.
+
+02:46.090 --> 02:47.110
+For Julia.
+
+02:47.560 --> 02:53.020
+The way this works is Python is going to provide the Jupiter notebook environment for you and everything
+
+02:53.020 --> 02:54.340
+else is going to be in Julia.
+
+02:54.580 --> 02:58.880
+But the environment, the idea that you work with is going to come from Python.
+
+02:59.140 --> 03:04.510
+Julia does have its own environment, but it's slightly glitchy right now because people are working
+
+03:04.510 --> 03:04.870
+on that.
+
+03:04.870 --> 03:09.460
+So we're going to stick with the Jupiter Nordberg environment that you might be more familiar with.
+
+03:09.850 --> 03:13.150
+So all you have to do is say Jupiter Lab, and it's going to give you a prompt.
+
+03:13.330 --> 03:16.390
+I'm not going to get that because I've already set up Jupiter Lab.
+
+03:17.260 --> 03:21.550
+But the prompt is going to ask you if a new environment should be set up for Julia, make sure that
+
+03:21.550 --> 03:21.820
+you hit.
+
+03:21.820 --> 03:22.090
+Why?
+
+03:22.090 --> 03:23.790
+So that you don't run into any conflicts.
+
+03:24.130 --> 03:25.180
+So when you hit, enter.
+
+03:26.440 --> 03:31.870
+You get a prompt, you say why, and then it's going to go ahead, download Minniecon to set up a basic
+
+03:31.870 --> 03:35.850
+Python environment for you and then show you the Jupiter lab environment.
+
+03:35.950 --> 03:42.490
+You can go ahead and download the resources for this, and it will give you a notebooks folder that
+
+03:42.490 --> 03:45.930
+is going to have all the Python notebooks that we are going to work with.
+
+03:46.180 --> 03:51.130
+So you can go ahead and check to make sure that your package is correctly installed.
+
+03:51.130 --> 03:55.780
+So you can go to 009 sanity check, start typing you to double the hey.
+
+03:56.020 --> 03:57.180
+So that's going to be a string.
+
+03:57.310 --> 04:01.120
+And if you say yes, get it or had three, it should give you.
+
+04:01.180 --> 04:01.850
+Hey, hey, hey.
+
+04:02.290 --> 04:06.830
+So this carrot is going to ensure that you are working with Julia and not with Python, obviously.
+
+04:07.350 --> 04:11.980
+OK, and then you can say virgin info and you will see what the current version is.
+
+04:11.980 --> 04:18.250
+I'm working with one five three, but one six zero has just come out and you should be able to work
+
+04:18.250 --> 04:18.850
+with that as well.
+
+04:19.060 --> 04:21.640
+There aren't any major changes from one five three to one six.
+
+04:21.640 --> 04:25.810
+But since Julia is evolving really quickly, there might be two other changes down the line, but we'll
+
+04:25.810 --> 04:27.700
+cover them as we progress.
+
+04:27.760 --> 04:30.600
+So once you're here, you can see all the notebooks over here.
+
+04:30.610 --> 04:35.050
+And as we progress with the course, you can go ahead and look at the individual files that we're working
+
+04:35.050 --> 04:35.290
+with.
+
+04:35.530 --> 04:39.640
+You can go along or look at the notebooks that I've provided.
+
+04:40.440 --> 04:44.250
+I would highly recommend that you take the code yourself so that you can get a thorough understanding
+
+04:44.250 --> 04:45.880
+of this if you want to follow along.
+
+04:45.900 --> 04:51.060
+You can click on Plus and create a Julia one five three or Julia one six zero notebook and.
+
+04:52.050 --> 04:56.820
+So let's move to the actual core of the course now and start working with the Julia language.

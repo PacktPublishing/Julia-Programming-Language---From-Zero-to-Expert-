@@ -1,0 +1,197 @@
+WEBVTT
+
+0
+00:00.810 --> 00:01.410
+...
+
+1
+00:01.770 --> 00:05.550
+Hi and welcome to this concise, highly productive course on the Julia programming language.
+
+2
+00:05.910 --> 00:06.800
+I'm Dr. Nauman
+
+3
+00:06.810 --> 00:09.870
+I have a PhD and a postdoc in applications of machine learning.
+
+4
+00:10.170 --> 00:15.420
+I have more than 15 years of teaching experience and several best seller courses online, including many
+
+5
+00:15.420 --> 00:17.170
+related to machine learning and data science.
+
+6
+00:17.790 --> 00:22.050
+I know where people struggle with these courses since I've guided several thousand students in these
+
+7
+00:22.050 --> 00:22.470
+areas.
+
+8
+00:23.070 --> 00:27.780
+Data science and machine learning are fast paced fields where you need to keep up with the latest trends.
+
+9
+00:28.140 --> 00:33.510
+If you get stuck with old tools, languages or frameworks currently in use in your job, you will have
+
+10
+00:33.510 --> 00:36.630
+trouble when you try to switch jobs or try to solve new problems.
+
+11
+00:37.320 --> 00:41.490
+This is why you need to keep yourself updated with the latest tools and languages coming out in this
+
+12
+00:41.490 --> 00:43.500
+field in data science and machine learning.
+
+13
+00:43.500 --> 00:47.220
+The hot new language that shows a lot of promise is the Julia programming language.
+
+14
+00:48.000 --> 00:50.750
+Julia has been gaining acceptance in the industry very fast.
+
+15
+00:51.180 --> 00:53.820
+Many people feel that it has the best of both worlds.
+
+16
+00:54.060 --> 00:55.650
+It's very, very fast.
+
+17
+00:55.800 --> 01:00.780
+It's comparable to fastest languages such as C, and it's also extremely easy to learn.
+
+18
+01:01.050 --> 01:05.280
+And that's because it's basic syntax is very similar to the popular Python language.
+
+19
+01:05.610 --> 01:10.200
+Due to these two trends, many feel that it will quickly become the language of choice, or at least
+
+20
+01:10.200 --> 01:13.740
+a significant player in the fields of scientific computing, data science and machine learning.
+
+21
+01:13.980 --> 01:18.600
+In this course, you will learn the best features of Julia in the smallest amount of time
+
+22
+01:18.600 --> 01:19.020
+possible.
+
+23
+01:19.440 --> 01:23.040
+We take a concise approach towards learning that will allow you to learn the basics.
+
+24
+01:23.040 --> 01:28.650
+syntax of Julia, how it's different from Python, how to apply it to the concepts of data science,
+
+25
+01:28.650 --> 01:34.380
+and last but not least, how it's machine learning capabilities can enable you to supercharge your career.
+
+26
+01:35.010 --> 01:38.850
+If you know Julia, you will stand out from everyone else who has worked with data science on machine
+
+27
+01:38.850 --> 01:39.150
+learning.
+
+28
+01:39.390 --> 01:43.890
+Simply a mention of Julia in your profile will show potential employers that you are staying ahead of
+
+29
+01:43.890 --> 01:45.960
+everyone else and know the state of the art.
+
+30
+01:46.560 --> 01:50.580
+Knowing Julia would also allow you to work with the latest and greatest data science tools and machine
+
+31
+01:50.580 --> 01:53.970
+learning models and also create your own very, very easily.
+
+32
+01:54.210 --> 01:57.390
+And the best part is that there are no prerequisites for taking this course.
+
+33
+01:57.570 --> 02:01.800
+If you know some basic python, it will definitely help, but you will still get all of the content
+
+34
+02:01.800 --> 02:03.660
+if you've never worked with Python before.
+
+35
+02:04.110 --> 02:07.620
+I will, however, assume that you've worked with some basic data science and machine learning models
+
+36
+02:07.620 --> 02:10.680
+before, since we won't cover the machine learning during this course.
+
+37
+02:11.250 --> 02:15.900
+But if you have worked with any data science tools and or machine learning models before, you should
+
+38
+02:15.900 --> 02:17.360
+have no trouble following the content.
+
+39
+02:17.820 --> 02:19.830
+This is aimed to be a first course in Julia
+
+40
+02:20.100 --> 02:24.300
+It will give you the foundations you need to keep learning on your own even after the course.
+
+41
+02:24.630 --> 02:28.170
+Take a look at the preview videos to see what kind of lectures to expect.
+
+42
+02:28.500 --> 02:33.090
+Everything is practical, no boring slides, very concise and will get you up to speed in no time at
+
+43
+02:33.090 --> 02:33.300
+all.
+
+44
+02:33.420 --> 02:34.830
+And I provide stunning support.
+
+45
+02:35.070 --> 02:37.560
+All questions are answered within 24 hours.
+
+46
+02:37.920 --> 02:40.620
+All this coupled with a 30 day no questions asked...
+
+47
+02:40.950 --> 02:43.710
+Money back guarantee means you have nothing to lose.
+
+48
+02:44.040 --> 02:46.380
+So enroll now and I'll see you on the inside.

@@ -1,0 +1,262 @@
+WEBVTT
+
+00:00.650 --> 00:06.800
+Part of machine learning models require a lot of time to do the training and the prediction, so it's
+
+00:06.800 --> 00:11.060
+a very common use case that you are working with a machine learning model and it does some learning
+
+00:11.300 --> 00:15.920
+and then you have to stop your machine or if you're running on the cloud, you have to stop the machine
+
+00:15.920 --> 00:19.520
+over there and it's necessary that your progress does not go away.
+
+00:20.030 --> 00:24.440
+For that, we have to say whatever learning the model has done onto a file for persistent storage.
+
+00:24.830 --> 00:27.810
+So here we are going to take a look at how we can do that using Julia.
+
+00:28.040 --> 00:30.310
+So I have taken the code from our previous session.
+
+00:30.860 --> 00:32.450
+So this is the whole model that we have.
+
+00:33.140 --> 00:35.120
+The actual model is defined over here.
+
+00:35.150 --> 00:37.840
+I've gone ahead and done this to save time.
+
+00:38.360 --> 00:41.030
+We called the same function as we did last time.
+
+00:41.030 --> 00:46.930
+We defined the loss, the optimizer and the callbacks, and then we go ahead and train it.
+
+00:47.360 --> 00:53.870
+So we've run this model once and it has got up to the accuracy of point five, six, four, and then
+
+00:53.870 --> 00:54.500
+we've stopped it.
+
+00:55.100 --> 01:00.590
+Now, what we want to do is we want to save this progress in a file so that we can load it at a later
+
+01:00.590 --> 01:00.960
+stage.
+
+01:01.100 --> 01:04.570
+OK, so for that, we are going to use the binary JSON library.
+
+01:04.580 --> 01:08.390
+So this is the recommended way for saving your models rates.
+
+01:08.780 --> 01:12.040
+So this is essentially going to save the rates of the model that we have learned.
+
+01:12.350 --> 01:20.480
+So all you have to do is just import the add save macro from the besoin library so you can start using
+
+01:20.480 --> 01:22.070
+this if you haven't already done that.
+
+01:22.640 --> 01:27.290
+So we can install this and then created electrical saves and you will see that this directory has been
+
+01:27.290 --> 01:28.100
+created over here.
+
+01:28.350 --> 01:35.150
+OK, then all we have to do is say save, give it to filename and then give it the model that we have
+
+01:35.150 --> 01:35.510
+to save.
+
+01:35.540 --> 01:38.010
+So this is the model that is this guy over here.
+
+01:38.030 --> 01:43.400
+So the parameters have been learned as a result of this goal and now we can go ahead and save these.
+
+01:43.430 --> 01:44.620
+So that is all you need.
+
+01:44.960 --> 01:48.630
+So you save that and it gets saved in this saves directory.
+
+01:48.650 --> 01:53.840
+OK, so if you go over there, you can see that my model 01 dot besoin has been created.
+
+01:54.050 --> 01:58.340
+OK, now we need to verify that this is indeed working properly.
+
+01:58.400 --> 02:03.410
+So what we're going to do is we're going to restart the kernel and we are going to load this file into
+
+02:03.410 --> 02:03.870
+our model.
+
+02:04.100 --> 02:05.180
+So let's go ahead and do that.
+
+02:05.190 --> 02:09.290
+So Gonul and restart and clear all outputs so everything goes away.
+
+02:09.950 --> 02:11.090
+So it restart.
+
+02:11.450 --> 02:12.950
+Now everything is going to go away.
+
+02:12.950 --> 02:17.180
+And we know that the model will have to start from scratch if you don't loaded.
+
+02:17.450 --> 02:21.780
+So let's go ahead and run this function again and the model as well.
+
+02:22.400 --> 02:26.870
+So this just gets our helper functions ready and.
+
+02:27.970 --> 02:30.730
+We are going to go down here and then run this.
+
+02:31.090 --> 02:37.270
+OK, so when we do that, you will notice that the training is going to resume from the previous point.
+
+02:37.540 --> 02:42.340
+And the way we're going to see that is that it's going to start somewhere above 75 percent accuracy
+
+02:42.340 --> 02:43.960
+that we achieved before the model.
+
+02:44.560 --> 02:46.780
+It will not start from point zero one as usual.
+
+02:47.290 --> 02:54.130
+So if you run this, we actually lowered the model, etc., we are going to use the vessel and load
+
+02:54.130 --> 02:58.110
+and load deviates into our model using the outlawed macro this time.
+
+02:58.140 --> 03:01.480
+OK, so everything from this file goes into the model.
+
+03:01.720 --> 03:07.450
+And if you try to see the model, you can see that it's that we define the loss and accuracy and the
+
+03:07.450 --> 03:08.510
+optimized everything else.
+
+03:08.890 --> 03:14.410
+And now if you go ahead and do Flagstad train, it's going to resume from the point that we left off
+
+03:14.410 --> 03:19.510
+somewhere around 75 percent accuracy, not from the point or six that we had earlier.
+
+03:20.110 --> 03:23.510
+So it's going to start off somewhere from that point where we left off.
+
+03:23.830 --> 03:28.880
+And you can save it again and load it at a later stage to just ensure that everything is working properly.
+
+03:29.740 --> 03:33.100
+So, as you can see, it has resumed from the 75 percent accuracy point.
+
+03:33.280 --> 03:37.120
+And if you save it now, then the next time it's going to resume from 85 percent.
+
+03:37.570 --> 03:43.540
+Now, another use case that is very common is that you have a very long running model and it like and
+
+03:43.540 --> 03:45.370
+it goes ahead and executes like overnight.
+
+03:45.490 --> 03:50.590
+And you want to make sure that you're saving check automatically after a certain period of time so that
+
+03:50.860 --> 03:56.440
+you don't lose the progress if your model starts diverging or if you have some sort of a problem in
+
+03:56.440 --> 03:56.840
+your model.
+
+03:57.100 --> 04:01.150
+So for that, we want to save checkpoint's automatically as our training progresses.
+
+04:01.360 --> 04:03.190
+And for that, it's very straightforward.
+
+04:03.190 --> 04:06.780
+We are simply going to modify our callback function.
+
+04:07.060 --> 04:12.760
+It's not only going to show the accuracy, but it's also going to save the model at regular intervals
+
+04:12.760 --> 04:16.510
+and mock them with the timestamp at which it was saved.
+
+04:17.230 --> 04:21.690
+So again, we are going to import the save macro from and library.
+
+04:22.270 --> 04:28.690
+We are also going to need the NOL function from the debts package and all we have to do is just modify
+
+04:28.690 --> 04:29.620
+the callback function.
+
+04:30.010 --> 04:32.490
+We had just show accuracy earlier.
+
+04:32.500 --> 04:37.890
+So every 10 seconds it's going to show the accuracy and it's going to save the model for us as well.
+
+04:38.230 --> 04:41.120
+And then we can go ahead and simply run this as before.
+
+04:41.470 --> 04:47.350
+So if you worked with Gadis or something like that, it's very difficult to save the checkpoints automatically
+
+04:47.800 --> 04:48.840
+in a clean method.
+
+04:48.850 --> 04:51.890
+And here the callbacks are so nice and clean that they work really well.
+
+04:52.210 --> 04:57.520
+So we run this and you will notice that our model checkpoints are going to start appearing over here
+
+04:57.520 --> 04:59.080
+in our saves directory.
+
+04:59.350 --> 05:02.500
+So as soon as we saw the accuracy, the model was saved over here.
+
+05:02.680 --> 05:08.290
+And every time the callback is called, a checkpoint is going to be created over here for us so that
+
+05:08.290 --> 05:10.360
+we can go ahead and later access these.
+
+05:10.720 --> 05:17.200
+You can modify the callback function according to your own needs so that it saves the model checkpoint
+
+05:17.440 --> 05:19.660
+more frequently or less frequently or something like that.
+
+05:19.900 --> 05:24.430
+Now you are in a position to run long running models and save your checkpoints and go back to a previous
+
+05:24.430 --> 05:25.620
+checkpoint if something goes wrong.
+
+05:26.470 --> 05:27.610
+So that's it for Flux.
+
+05:27.610 --> 05:33.040
+And in the next video, we are going to wrap this whole thing up and give you a little bit of details
+
+05:33.040 --> 05:37.950
+of how you can go ahead and expand your knowledge further if you want to continue working in this area.

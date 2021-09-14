@@ -1,0 +1,688 @@
+WEBVTT
+
+00:00.830 --> 00:06.830
+We're going to start off doing some basic data manipulation by reading a data set from a CSP file and
+
+00:06.830 --> 00:12.140
+then manipulating it, just as you would do with Banda's or a similar library in another language for
+
+00:12.140 --> 00:12.600
+this purpose.
+
+00:12.620 --> 00:15.140
+We are going to use the data frames and CSP package.
+
+00:15.350 --> 00:21.650
+So CSU package is dedicated for reading and writing data from and to CSP files, whereas data frames
+
+00:21.650 --> 00:24.550
+package is kind of the equivalent of Banda's.
+
+00:24.770 --> 00:30.060
+It's a package that allows you to read, manipulate and back tabular data.
+
+00:30.420 --> 00:33.260
+So for both of these, you might want to install them.
+
+00:33.260 --> 00:34.880
+If they're not previously installed.
+
+00:34.890 --> 00:40.550
+I have them installed, so I'm going to skip those two cells and do using data frames and then using
+
+00:40.550 --> 00:40.850
+CSS.
+
+00:40.850 --> 00:46.630
+We now we can go ahead and read this year's file using CSV file and give it the name of this history
+
+00:46.670 --> 00:47.410
+file that we have.
+
+00:47.720 --> 00:49.760
+So we've saved this in data folder.
+
+00:49.880 --> 00:57.710
+So over here and we are going to read this using this GSV dot file function, you will see a weird sort
+
+00:57.710 --> 00:58.570
+of a syntax over here.
+
+00:58.580 --> 01:00.030
+So this is the pipe symbol.
+
+01:00.350 --> 01:07.370
+What this does is the output of this function call is passed through the data frame constructor, but
+
+01:07.370 --> 01:13.610
+it's kind of a shortcut for taking the output of one function call and sending it to another function.
+
+01:13.820 --> 01:16.160
+This reduces the lines of code by a lot.
+
+01:16.160 --> 01:20.330
+And you'll see this again and again and you understand it when you try to run it.
+
+01:20.660 --> 01:25.620
+So this creates a data frame for us, which is essentially pendas data.
+
+01:25.910 --> 01:29.270
+If you haven't seen data frames before, it's simply a tabular structure.
+
+01:29.450 --> 01:31.040
+OK, so let's wait and run that.
+
+01:31.190 --> 01:35.840
+And the first time you run it, it's going to take a little bit of time, just as with everything in
+
+01:35.840 --> 01:36.200
+Julia.
+
+01:36.530 --> 01:38.540
+But after that, it should be really fast.
+
+01:38.660 --> 01:41.040
+So this should be a structure that is very familiar to you.
+
+01:41.270 --> 01:44.640
+So we have some data points over here and we have some columns over here.
+
+01:44.870 --> 01:52.960
+So X1 to X4 and we want to vie for we can access particular cities within this data frame.
+
+01:52.970 --> 01:58.280
+So one data series, or you can think of this as a column using the dot operator so we can say D.F.
+
+01:58.280 --> 01:59.870
+Dot and column name X1.
+
+02:00.150 --> 02:04.790
+So that gives us the values of just that column, or you can even use this with a string.
+
+02:04.790 --> 02:07.820
+So dot string x1 and that is the same thing.
+
+02:08.660 --> 02:15.050
+If you want to access particular rows you can use this index or one to four and column should be excellent.
+
+02:15.740 --> 02:16.640
+So excellent column.
+
+02:16.880 --> 02:18.080
+Just the first four rows.
+
+02:18.500 --> 02:19.310
+This works really well.
+
+02:19.580 --> 02:26.360
+If you want to access some particular columns based on some pattern, you can use something very similar
+
+02:26.360 --> 02:27.530
+to the regular expression.
+
+02:27.530 --> 02:29.570
+So you can say D.F. and are X.
+
+02:29.910 --> 02:35.450
+What that means is I'm going to give you this raw string and anything that matches this pattern of X
+
+02:35.450 --> 02:36.040
+should be done.
+
+02:36.320 --> 02:41.600
+So this is going to return x1 x2 three and four and Vyse are going to be omitted because they don't
+
+02:41.600 --> 02:42.320
+match this pattern.
+
+02:42.680 --> 02:44.990
+OK, so just some basic stuff.
+
+02:44.990 --> 02:47.420
+And as you can see, D.F. itself remains the same.
+
+02:47.450 --> 02:50.540
+So all of this election does not affect the data frame.
+
+02:51.110 --> 02:52.790
+It's just what is being returned to us.
+
+02:53.060 --> 02:56.940
+Right now you can access particular rows and you can access particular columns.
+
+02:56.960 --> 02:58.730
+Those are the basic two things that we have to do.
+
+02:59.030 --> 03:03.680
+There are many of the things that we have to do and we'll get to them as we take a look at other case
+
+03:03.710 --> 03:05.030
+studies in the future videos.
+
+03:05.160 --> 03:07.190
+But for now, let's go ahead and describe this data.
+
+03:07.280 --> 03:11.450
+So if you say describe D.F., it's going to give us some basic statistics about this.
+
+03:12.790 --> 03:18.160
+So for each of the columns, it's going to tell us the mean, the minimum, the median, the max number
+
+03:18.160 --> 03:20.530
+of missing values and the element type.
+
+03:21.020 --> 03:24.500
+So these are integers and these are flops.
+
+03:24.910 --> 03:29.740
+All the values that float X values are integers and all the X columns are integers.
+
+03:30.400 --> 03:36.160
+If you want to get a particular value out, you can pass these as arguments to the function describe
+
+03:36.430 --> 03:38.500
+and this will return just those things for you.
+
+03:38.830 --> 03:41.100
+So just the mean and the standard deviation.
+
+03:41.350 --> 03:47.260
+If you want to get the number of rows and columns you can say and rodef for rows and called for columns,
+
+03:47.620 --> 03:52.450
+you can also just say size D.F. if you want to get both of them at the same time.
+
+03:53.110 --> 03:58.220
+Now let's go ahead and insert some identifiers in this dataset.
+
+03:58.240 --> 04:01.960
+So this is an example of how you can insert a new column in an existing data frame.
+
+04:01.960 --> 04:02.150
+Right.
+
+04:02.170 --> 04:06.490
+So if you want to calculate something based on the values and then insert them, this is how you do
+
+04:06.490 --> 04:06.640
+it.
+
+04:06.850 --> 04:13.210
+So you can simply say the ID is equal to and because you are not selecting it, but assigning it, this
+
+04:13.210 --> 04:14.650
+is going to take these values.
+
+04:14.680 --> 04:15.940
+So want to enroll.
+
+04:16.210 --> 04:21.030
+So this is going to be one to eleven and this is going to go as the ID column of D.F..
+
+04:21.210 --> 04:27.460
+So this is going to be inserted now into the death and you will see that ID column has been inserted
+
+04:27.460 --> 04:28.700
+that goes from one to 11.
+
+04:28.930 --> 04:31.030
+This was not present over here.
+
+04:31.840 --> 04:33.610
+So that is how you then insert columns.
+
+04:34.360 --> 04:40.460
+What else can we do if we can find out the extreme of the values in this whole dataset?
+
+04:40.690 --> 04:45.850
+So, for instance, if you say XtremIO of all of these, so this is going to go ahead and calculate
+
+04:45.850 --> 04:47.670
+the extreme extreme values for this.
+
+04:47.680 --> 04:51.490
+So the minimum in these is two and the maximum is 13.
+
+04:51.520 --> 04:54.310
+So it ignores all the rows and columns and just gives us that.
+
+04:54.790 --> 05:00.400
+So what we want to do is we want to figure out the minimum value, the absolute minimum value on all
+
+05:00.400 --> 05:04.510
+of these X's and the absolute maximum values in all of these vice.
+
+05:04.660 --> 05:06.430
+And the reason for that is we are going to plot them.
+
+05:06.430 --> 05:09.880
+And for that we need the limits for the X axis and the Y axis.
+
+05:10.000 --> 05:15.250
+So we want to know what the minimum value of is are in all of the columns combined and what the minimum
+
+05:15.250 --> 05:21.670
+and maximum are for the values for all the columns combined, because we want to give the same X limits
+
+05:21.670 --> 05:25.720
+and Y limits to all the different plots that we're going to try and create.
+
+05:25.870 --> 05:32.090
+So we are going to plot X one against Y one X2 against Y2, X against Y three and four against Y four.
+
+05:32.260 --> 05:37.230
+So these are going to be four different plots, but we want them to have the same X and Y limits.
+
+05:37.510 --> 05:39.510
+It'll make sense when we see the output.
+
+05:39.670 --> 05:45.020
+But for now our objective is to calculate the extremophile Xs separately and Y separately.
+
+05:45.040 --> 05:49.630
+OK, so we can go ahead and first select the X columns.
+
+05:49.630 --> 05:52.720
+So Select Dogmatics is going to return all of these.
+
+05:53.020 --> 05:54.400
+We're going to build this one by one.
+
+05:54.790 --> 05:58.920
+So now from here we can convert all of this into Imitrex.
+
+05:58.930 --> 06:00.670
+So this is what we had in the previous.
+
+06:01.090 --> 06:03.130
+And now we are going to convert this into a matrix.
+
+06:03.400 --> 06:04.780
+So that gives us this.
+
+06:04.780 --> 06:05.390
+Go ahead.
+
+06:05.890 --> 06:09.460
+Now we can calculate the extremes, just as we did over here.
+
+06:09.760 --> 06:14.200
+And this is going to give us the extreme minimum and the extreme maximum.
+
+06:14.300 --> 06:14.610
+Right.
+
+06:15.070 --> 06:21.070
+But when you're actually doing the plotting, you want to slightly overshoot the maximum and slightly
+
+06:21.070 --> 06:21.980
+undershoot the minimum.
+
+06:22.000 --> 06:24.480
+So our plots should go from three to 20.
+
+06:24.850 --> 06:27.090
+So for that, we are going to use the broadcast operator.
+
+06:27.280 --> 06:34.510
+And what this is going to do is it's going to add minus one to four and plus one to 19, giving us 320
+
+06:34.510 --> 06:34.810
+back.
+
+06:34.810 --> 06:35.040
+Right.
+
+06:35.090 --> 06:35.380
+So.
+
+06:36.350 --> 06:42.800
+This is a very common structure of how we get the minimum and maximum for blocks, so that is why we
+
+06:42.800 --> 06:44.310
+are coming this as a gay city over here.
+
+06:44.510 --> 06:46.690
+And once you see the plot, all of this is going to make sense.
+
+06:46.720 --> 06:51.650
+OK, now we want to convert them into an array because that is what the plot package expects.
+
+06:51.780 --> 06:57.230
+So we can simply use the correct function and that is going to go ahead and convert this into a to elementary,
+
+06:57.770 --> 06:59.360
+both of which are in 64.
+
+06:59.490 --> 07:05.390
+OK, so once we have this for the limit, we are going to do the exact same thing for Valemus, except
+
+07:05.390 --> 07:07.560
+this time we're not going to do them one by one.
+
+07:07.730 --> 07:09.990
+Instead, we'll just do the whole thing at once.
+
+07:10.160 --> 07:15.770
+So our limits are two point one to thirteen point seven four, as you can see over here.
+
+07:16.220 --> 07:21.650
+So the max is thirteen point seven four and the limit is two point one for us.
+
+07:22.070 --> 07:26.720
+Now, what we're going to do is we're going to actually do the plot and we're going to do it using two
+
+07:26.720 --> 07:29.500
+methods, the first method we saw in the previous video.
+
+07:29.750 --> 07:34.910
+So plotting so we can use the plots package and that does really good plots.
+
+07:35.210 --> 07:40.790
+But if you're coming from a language such as Python and you already have code for matplotlib and you've
+
+07:40.790 --> 07:44.660
+already done all of that, in that case, you don't have to relearn everything.
+
+07:44.660 --> 07:51.530
+You can simply use your python or matplotlib code using the pilot package so you can go ahead and say
+
+07:51.560 --> 07:52.490
+using pilot.
+
+07:52.760 --> 08:00.050
+And then because we also want a regression line on this model, we want to do using GLM.
+
+08:00.050 --> 08:01.840
+So this is generalized linear models.
+
+08:01.850 --> 08:03.200
+It's not important what this is.
+
+08:03.200 --> 08:04.560
+You'll see what this means in a minute.
+
+08:04.910 --> 08:11.720
+So we have using Glemp because we now have Bayport, we can use the matplotlib syntax for creating this
+
+08:11.720 --> 08:11.990
+plot.
+
+08:12.200 --> 08:14.230
+So Afikomen access is going to be built.
+
+08:14.510 --> 08:21.500
+Subplots, we're going to create a two by two, which means for total plots, one for each of X1, x2,
+
+08:21.500 --> 08:22.470
+extra and X4.
+
+08:22.670 --> 08:23.020
+OK.
+
+08:24.500 --> 08:30.770
+We're going to set the layout as a very tight one, and we are going to create four plots, four in
+
+08:30.770 --> 08:37.160
+one to four for each of these plots, we are going to take X one and Y one, and we are going to use
+
+08:37.160 --> 08:41.150
+this GEULA model to predict the regression line.
+
+08:41.750 --> 08:45.070
+So let me go ahead and just brought this first and then I'll show you what we're doing.
+
+08:45.230 --> 08:52.160
+OK, so this is the plot we have x1 against one extra against Y, three x2 against Y2 and X for, against
+
+08:52.370 --> 08:52.910
+Y for.
+
+08:53.240 --> 08:59.360
+So you'll notice over here that all the elements are the same for all of these plots and the limits
+
+08:59.360 --> 09:00.280
+are also the same.
+
+09:00.500 --> 09:06.470
+So you'll notice over here the X2 has the maximum at around 15, but we're still going all the way up
+
+09:06.470 --> 09:09.740
+to 20 because we want all four of these plots to look the same.
+
+09:09.770 --> 09:11.580
+OK, so that we can do the comparison.
+
+09:11.840 --> 09:13.880
+OK, so here's what the function does.
+
+09:14.150 --> 09:15.920
+It gets the X and Y symbols out.
+
+09:16.340 --> 09:20.310
+Then it does a linear model, which is this guy over here.
+
+09:20.560 --> 09:24.380
+So this orange line is created using this model variable.
+
+09:24.500 --> 09:29.500
+And this model variable is essentially a linear model which is learned from this dataset.
+
+09:29.600 --> 09:36.630
+OK, so the relationship between VI and X is learned from this data set using the L.M. function.
+
+09:36.920 --> 09:43.100
+So if you're not familiar with linear models or regression, this is just telling us how violent changes
+
+09:43.100 --> 09:44.420
+as you change X1.
+
+09:44.690 --> 09:46.080
+So it's not really all that important.
+
+09:46.910 --> 09:48.490
+Now we are going to do the actual plot.
+
+09:48.620 --> 09:56.260
+We are going to give it the X limits and we are going to plot the regression line in orange over here.
+
+09:56.720 --> 10:03.230
+So we're going to predict based on this model and based on this data set from the minimum of the limit
+
+10:03.230 --> 10:04.670
+to the maximum of the limit.
+
+10:04.700 --> 10:07.460
+So all this is doing is plotting the regression.
+
+10:07.460 --> 10:14.210
+Like then we are also plotting the scatterplot, using D.F. all the rows and economy and D.F. all the
+
+10:14.210 --> 10:15.390
+rows y column.
+
+10:15.800 --> 10:21.110
+So that's how scatterplot we are setting the X limits and Y limits and giving it the label over here.
+
+10:21.140 --> 10:23.340
+So this we are doing for each of the plots.
+
+10:23.360 --> 10:29.330
+Finally, we are doing this calculation overhead as well because we are assuming y to be linearly dependent
+
+10:29.330 --> 10:29.950
+on X1.
+
+10:29.960 --> 10:33.090
+We are defining what the model has learned from the data.
+
+10:33.380 --> 10:36.280
+So as you will see, all four of these are exactly the same.
+
+10:36.590 --> 10:40.760
+So point five three point zero point five three point zero point five three point zero point five three
+
+10:40.760 --> 10:41.180
+point zero.
+
+10:41.330 --> 10:44.360
+But the actual data looks very different from each other.
+
+10:44.480 --> 10:45.980
+OK, so that's the whole point of this.
+
+10:46.640 --> 10:52.190
+What we are doing over here is essentially looking at how you can go ahead and plot data, how you can
+
+10:52.430 --> 10:58.640
+create a basic regression model or a linear model based on your data and how you can plot different
+
+10:58.640 --> 11:00.950
+things using a very compact format.
+
+11:01.010 --> 11:02.720
+OK, so that's what we have over here.
+
+11:03.140 --> 11:08.110
+Now we can do the same thing using blocks and you will see that the actual code looks a lot cleaner.
+
+11:08.600 --> 11:14.270
+So we're going to do using blocks and we are going to create a plot array and this is going to be an
+
+11:14.270 --> 11:14.960
+array of type.
+
+11:14.960 --> 11:20.540
+Any the reason for this is that it just makes our life a lot easier because we can simply push different
+
+11:20.540 --> 11:23.320
+plots into this plot array within this loop.
+
+11:23.330 --> 11:28.520
+So we're going to create four plots, push them into the plot array and finally use a single plot function
+
+11:28.730 --> 11:30.750
+to plot all of these arrays together.
+
+11:31.070 --> 11:37.130
+So once you are comfortable with Julia, you will see that this code is a lot messier and you code looks
+
+11:37.130 --> 11:37.700
+a lot cleaner.
+
+11:37.700 --> 11:39.350
+If you just look at it, it looks cleaner.
+
+11:39.430 --> 11:42.380
+OK, so our X Files are going to come from our data frame.
+
+11:42.920 --> 11:44.270
+So are our rivals.
+
+11:44.480 --> 11:47.320
+And then we are going to do the plot for X and Y.
+
+11:47.330 --> 11:51.050
+Well, we're going to tell it that it should be a scatterplot.
+
+11:51.350 --> 11:54.800
+The X label and my level are set X limits and Y limits are set.
+
+11:55.640 --> 11:59.470
+We are going to put smoothies equal to true, which is going to do the regression line for us.
+
+11:59.480 --> 12:01.730
+We don't have to go to Glenmorangie and model.
+
+12:01.760 --> 12:03.580
+It's going to take care of that for us.
+
+12:03.890 --> 12:05.980
+And finally we set about it as well.
+
+12:06.770 --> 12:09.610
+Once we have the plot V, we push them into an array.
+
+12:09.620 --> 12:15.290
+So this is just putting that plot into the array so that we can later on plot them all together, OK?
+
+12:16.350 --> 12:21.750
+So once we're done with all four plots, we are going to say plot and we are going to give it plot ready,
+
+12:21.960 --> 12:28.800
+except we are going to use the DataDot operator, which we saw in 03 01 functions that I buy and be.
+
+12:28.980 --> 12:32.200
+So we are splatting the values.
+
+12:32.210 --> 12:35.920
+So these one, two, three were converted into three different parameters.
+
+12:36.090 --> 12:41.020
+Similarly, we are going to convert all the different plots on the four plots that we have over here.
+
+12:41.280 --> 12:44.220
+Those four are going to be passed to the plot function separately.
+
+12:44.490 --> 12:45.840
+Layout is going to be two by two.
+
+12:46.170 --> 12:50.660
+Legend is going to be absent and the size is going to be set at eight hundred four hundred.
+
+12:51.120 --> 12:53.250
+So that creates the plots for us.
+
+12:53.520 --> 12:58.770
+So when you try to do that, you're going to get this added over here both by plots and the plot function
+
+12:58.770 --> 12:59.520
+export plot.
+
+12:59.520 --> 13:04.210
+And because you should not be overriding the global exports, this is going to give you an error.
+
+13:04.470 --> 13:10.530
+So the really easy thing for that is you simply restart the kernel so you should pick one or the other.
+
+13:10.560 --> 13:14.090
+Here I am presenting both of them so that you have the option here.
+
+13:14.100 --> 13:17.900
+We are going to go ahead and restart the kernel and simply load our data again.
+
+13:18.180 --> 13:20.570
+So we are going to load our data.
+
+13:21.120 --> 13:27.120
+We are going to define our limit and my limit and then jump straight to our plot.
+
+13:28.150 --> 13:31.360
+And do the actual plotting, so now your address should be gone.
+
+13:31.900 --> 13:32.360
+There you go.
+
+13:33.040 --> 13:37.870
+I think the code as well as the output looks pretty clean and it serves the same purpose.
+
+13:37.930 --> 13:45.250
+OK, so the point of this video was No one ready to do some basic manipulation and then see two ways
+
+13:45.250 --> 13:46.720
+of doing the actual plotting.
+
+13:47.170 --> 13:54.640
+I personally prefer doing plots package from Julia because, one, it's native to it looks really clean
+
+13:54.730 --> 13:59.980
+and it lets you get familiar with Julias Index so that you can use the much more powerful libraries
+
+14:00.130 --> 14:01.170
+which are present in Julia.
+
+14:01.330 --> 14:06.490
+In the next video, we are going to do some further data manipulation and we are going to do some in-depth
+
+14:06.490 --> 14:07.780
+analysis after that.

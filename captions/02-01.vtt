@@ -1,0 +1,820 @@
+WEBVTT
+
+00:00.940 --> 00:06.070
+As you know, one of the most important areas in which Julia really shines is numerical computing and
+
+00:06.070 --> 00:06.700
+machine learning.
+
+00:06.940 --> 00:12.520
+The reason for this is the excellent building support for arrays, matrices and sensors in Julia.
+
+00:12.550 --> 00:13.920
+So let's go ahead and take a look at that.
+
+00:14.320 --> 00:16.860
+So we're going to define a list as we did before.
+
+00:16.870 --> 00:18.760
+And these are called arrays in Julia.
+
+00:19.330 --> 00:25.800
+So if you do that, we'll get an array of type string, which is one dimensional and it has three elements.
+
+00:25.990 --> 00:32.230
+We can take a look at the type of this variable to see that it is indeed an array which holds all elements
+
+00:32.230 --> 00:34.340
+of type string and it is one dimensional.
+
+00:34.750 --> 00:37.390
+So this is a one day array of string values.
+
+00:38.260 --> 00:42.570
+Similarly, we can define a one d array of integer values.
+
+00:43.000 --> 00:47.830
+So this is going to be an in 64 type array with one dimension only.
+
+00:48.370 --> 00:54.760
+We can go ahead and do the usual operations on that, such as Bush, which pushes the element at the
+
+00:54.760 --> 01:01.210
+end and we can pop, which is going to remove the element and modify the actual right.
+
+01:01.360 --> 01:08.150
+So let's go ahead and turn this into a tree so we can do that using the usuals index of a list of lists.
+
+01:08.170 --> 01:12.220
+So this is a list and in it each element in itself is a list.
+
+01:12.260 --> 01:12.430
+Right.
+
+01:12.530 --> 01:13.630
+So let's go ahead and do that.
+
+01:14.200 --> 01:20.950
+This is going to give us an array and the type of each element in that area is an array itself.
+
+01:21.190 --> 01:22.640
+So that is how you read this.
+
+01:23.140 --> 01:27.930
+It's a three elementary and each element itself is an array of integers.
+
+01:28.420 --> 01:31.330
+So this one guy over here is this.
+
+01:32.540 --> 01:35.120
+Array of integers, which is one dimensional.
+
+01:35.960 --> 01:38.720
+You can take a look at the type which gives you the same information.
+
+01:39.530 --> 01:42.170
+Now notice that this is not a total matrix.
+
+01:43.020 --> 01:49.580
+This is an array of arrays, which means that I can go ahead and change the size of this to that.
+
+01:49.580 --> 01:50.510
+And this still works.
+
+01:51.020 --> 01:57.740
+So the size of each array can be different because the type is still in 64, comma one.
+
+01:58.070 --> 02:04.160
+OK, so what if we want to create a two, the Matrix or two, the array instead of an array of arrays?
+
+02:04.880 --> 02:07.490
+The syntax for that is slightly different, but very similar.
+
+02:08.570 --> 02:13.710
+So we say X is equal to one, two, three, notice that there are no commas in between each element.
+
+02:14.060 --> 02:16.880
+So here we have commas and here there are no commas.
+
+02:17.030 --> 02:23.120
+So X is equal to one comment three, and you will notice that the type now is one x three.
+
+02:23.510 --> 02:30.570
+So it's a one in two three array and each element is in 64 and the dimensions of this array are two.
+
+02:30.590 --> 02:32.630
+Now I also notice the difference of this.
+
+02:32.630 --> 02:38.900
+This is extremely important that the type of this is an array of arrays and this is a to the array and
+
+02:38.900 --> 02:40.610
+the sizes one grows three.
+
+02:40.910 --> 02:46.760
+OK, so this is if you're wondering now, we can go ahead and transpose this and this is going to turn
+
+02:46.760 --> 02:49.250
+this into a column vector, so to say.
+
+02:49.520 --> 02:55.990
+And you will see that the type is something really weird, but it's still an array of insectivores,
+
+02:56.000 --> 03:01.040
+which is two dimensional and it has been converted somehow into another type.
+
+03:01.070 --> 03:02.950
+But we don't want to go into that just now.
+
+03:03.080 --> 03:04.830
+We'll come back to this when we need it.
+
+03:05.090 --> 03:11.000
+OK, we can take this step further and do a two degree so we can have one, two, three, four, five,
+
+03:11.000 --> 03:11.900
+six, seven, eight, nine.
+
+03:13.260 --> 03:17.610
+And notice that we are missing the commas in between the different roles as well.
+
+03:18.060 --> 03:25.290
+So no commas at all that is going to convert this into a matrix or a 2D array of 64 types.
+
+03:25.530 --> 03:26.800
+So this is a three by three.
+
+03:28.050 --> 03:31.490
+What that means is if I try to do this, this is not going to work.
+
+03:31.950 --> 03:37.410
+So if I say seven, eight, nine, 12, the number of columns of each array must match.
+
+03:37.470 --> 03:37.740
+Right.
+
+03:37.760 --> 03:41.010
+So that has to be equal for all of them.
+
+03:41.770 --> 03:42.780
+That is all matrix works.
+
+03:42.810 --> 03:44.410
+OK, so let's go ahead and change that back.
+
+03:45.060 --> 03:50.640
+So this is now a matrix, which is a two degree each element of which is in 64.
+
+03:50.850 --> 03:55.230
+If you convert one of these to offload, everything is going to turn into a flaw.
+
+03:55.260 --> 03:56.810
+So now this is a 464 array.
+
+03:57.070 --> 03:58.640
+All the elements are not flawed.
+
+03:58.760 --> 04:00.720
+OK, we've done this before.
+
+04:01.200 --> 04:06.420
+Now, let's go ahead and take a look at the shapes of arrays and a little bit about reshaping how that
+
+04:06.420 --> 04:10.770
+works, because this is going to be very important later on when we do machine learning with Julia so
+
+04:10.770 --> 04:11.870
+we can say size of mat.
+
+04:11.880 --> 04:15.450
+And this is going to tell us into one that this is a three by three matrix.
+
+04:15.900 --> 04:20.640
+We can also go ahead and take a look at the size of this X that we created, which was essentially a
+
+04:20.640 --> 04:21.050
+vector.
+
+04:21.540 --> 04:27.260
+So this is a one by three and we can see the size of fib, which is this guy over here.
+
+04:27.540 --> 04:31.530
+So FIB is an array which has seven elements.
+
+04:31.530 --> 04:31.740
+Right.
+
+04:31.770 --> 04:33.160
+So you will notice the difference.
+
+04:33.180 --> 04:34.480
+This is not one cross seven.
+
+04:34.850 --> 04:36.000
+This is just seven.
+
+04:36.380 --> 04:41.040
+OK, because this is a one dimensional array and that has just this one dimension, which has seven
+
+04:41.040 --> 04:42.020
+elements here.
+
+04:42.030 --> 04:42.690
+We have a.
+
+04:43.830 --> 04:51.090
+Still one dimensional array, but it's a one cross, three matrix or what we do typically as a vector.
+
+04:51.330 --> 04:52.500
+So this has a distinction.
+
+04:52.500 --> 04:57.150
+And when you do machine learning, this is going to cause headaches or really make your life easier
+
+04:57.150 --> 04:57.990
+if you understand this.
+
+04:58.260 --> 05:01.860
+So go ahead and revise this so that you understand the difference between the two.
+
+05:02.160 --> 05:06.860
+OK, so let's define a Matrix X, which has these elements.
+
+05:07.230 --> 05:09.020
+We can go ahead and reshape this.
+
+05:09.030 --> 05:12.990
+So this is right now a four by three three so foras and three columns.
+
+05:13.350 --> 05:18.470
+We can go ahead and reshape this into a two by six matrix so we can reshape this.
+
+05:18.470 --> 05:21.240
+So you will notice this goes one for.
+
+05:22.080 --> 05:28.130
+Then 17 and two, five and eight, 11, three, six and nine, 12, so that is how the reshaping works.
+
+05:28.320 --> 05:30.990
+It's going to convert the four by three right into a two by six three.
+
+05:31.470 --> 05:37.200
+According to this rule, it goes from left top to bottom and then to the right.
+
+05:37.510 --> 05:41.310
+So that is how it goes if we can reshape this to a 12 by one.
+
+05:41.670 --> 05:45.700
+So it goes one four seven, 10, two, five, eight, 11, three, six, nine, 12.
+
+05:46.140 --> 05:47.100
+So that is how this goes.
+
+05:47.350 --> 05:48.420
+So top left.
+
+05:48.660 --> 05:52.030
+First it goes down, then it goes right and then down and then right.
+
+05:52.080 --> 05:54.030
+And that is how reshaping works.
+
+05:54.850 --> 05:57.750
+We can go ahead and reach back to a four by three.
+
+05:58.080 --> 06:03.810
+And the way this will work is if you change something and then you reshape it back, the rules are simply
+
+06:03.810 --> 06:06.660
+going to work out to produce the same matrix for you.
+
+06:06.930 --> 06:11.640
+So if you reshape this into a four by three, it's going to create the first column as one four seven
+
+06:11.640 --> 06:11.940
+ten.
+
+06:12.210 --> 06:14.940
+Then the second column is two five eight 11.
+
+06:14.940 --> 06:20.490
+And the last column is three six nine twelve, which is exactly the same thing that we started with
+
+06:20.490 --> 06:21.020
+over here.
+
+06:21.270 --> 06:23.210
+OK, so the shaping really works out.
+
+06:23.700 --> 06:25.380
+So why is this reshaping necessary?
+
+06:25.560 --> 06:30.480
+Sometimes when you have a model that expects a specific shape and you have your data in another shape,
+
+06:30.660 --> 06:34.170
+you don't want to modify the model, you want to modify your data to fit the shape.
+
+06:34.560 --> 06:38.250
+So, again, when we get to the machine learning part, we'll see how this works out.
+
+06:39.240 --> 06:43.590
+Right now, we're just doing the building blocks, so finally, let's go ahead and take a look at some
+
+06:43.590 --> 06:46.010
+helper functions for working with mattresses.
+
+06:46.290 --> 06:54.330
+So we have a land function which creates a four by three array or a matrix which has random numbers
+
+06:54.600 --> 06:57.270
+going from zero all the way up to one.
+
+06:57.520 --> 07:00.420
+OK, so each element is uniformly distributed from zero to one.
+
+07:01.470 --> 07:03.120
+We can save this in an array.
+
+07:03.360 --> 07:06.240
+So over here, Matt, we can create a copy of that.
+
+07:06.420 --> 07:10.770
+And if you recall from the last lecture, if you modify my to one comma one.
+
+07:10.770 --> 07:14.630
+So that is essentially how you access the individual elements within the Matrix.
+
+07:14.640 --> 07:16.700
+So roll comma column.
+
+07:17.130 --> 07:20.260
+If you change that, Mattu is changed and so is one.
+
+07:20.430 --> 07:20.570
+Right.
+
+07:20.670 --> 07:22.530
+So you would recall this.
+
+07:22.680 --> 07:28.110
+This is the same problem of sharing the memory, even though you did this right.
+
+07:28.120 --> 07:32.220
+So you did not create a copy, you simply created a new reference variable, which is pointing to the
+
+07:32.220 --> 07:32.940
+same matrix.
+
+07:33.150 --> 07:37.470
+If you want to actually create a copy, which is sometimes necessary, you can go ahead and use the
+
+07:37.470 --> 07:38.760
+copy function as before.
+
+07:38.910 --> 07:45.930
+So if you do that math three one one changes Matt three but does not change Matt itself.
+
+07:46.140 --> 07:48.970
+So Matt remains the same as before and Matri cannot change.
+
+07:48.990 --> 07:52.650
+So you can use copy if you want to create an actual copy of your whole data.
+
+07:52.830 --> 07:55.880
+Obviously, if you have like a million by million Matrix, you don't want to create a copy.
+
+07:56.160 --> 07:58.320
+You want to somehow optimize your code anyway.
+
+07:58.800 --> 08:04.740
+Just as with all other modern languages, we have a way of creating lists or arrays using comprehensions
+
+08:04.740 --> 08:07.920
+which are a shortcut for creating lists.
+
+08:07.950 --> 08:11.340
+So if you have not seen this before, it's a very simple syntax.
+
+08:11.460 --> 08:13.760
+So we can say for I in one to five.
+
+08:13.770 --> 08:18.060
+So this is going to create a list which is going to go from one to five.
+
+08:18.180 --> 08:20.520
+And for each of the elements, it's going to collect this.
+
+08:20.700 --> 08:22.970
+It's a lot more difficult to explain.
+
+08:22.980 --> 08:25.770
+It's very easy to just show it to you, so I'll show that to you.
+
+08:26.100 --> 08:27.520
+So it creates a five elementary.
+
+08:27.750 --> 08:33.330
+It goes from one to five and it creates I the second time I and the third time I and the four time I
+
+08:33.330 --> 08:34.320
+and the fifth time I write.
+
+08:34.330 --> 08:36.090
+So you can go ahead and change this to a square.
+
+08:36.360 --> 08:38.600
+And this is going to create this list for you.
+
+08:38.940 --> 08:44.790
+You can go all the way up to 10 and this is going to go all the way up to 10 and square the numbers.
+
+08:45.090 --> 08:45.980
+So that is how this works.
+
+08:46.680 --> 08:49.210
+You can also go ahead and do a nested loop.
+
+08:49.320 --> 08:52.670
+So for I in one, two, five, comma in six to ten.
+
+08:52.920 --> 08:58.410
+So this is essentially going to create a nested loop in which I'm going to go from one to five and within
+
+08:58.410 --> 09:01.050
+that loop is going to go from six to 10.
+
+09:01.350 --> 09:06.180
+So essentially when you do I go the first time, it's going to be one comma six, then it's going to
+
+09:06.180 --> 09:09.270
+be one comma seven, then one eight all the way up to one moment.
+
+09:09.270 --> 09:14.630
+And then it's going to go to six to seven all the way up to 2010 and so on.
+
+09:14.940 --> 09:19.500
+So this creates a five favorite because these are five elements and these are five.
+
+09:19.830 --> 09:23.940
+And the first time it's going to go one six one seven one eight one nine 110.
+
+09:24.180 --> 09:27.900
+And the second time when the outer loop runs, it does this.
+
+09:28.170 --> 09:29.750
+So this is going to be a Cartesian product.
+
+09:29.760 --> 09:34.060
+It's a very handy way of doing simple manipulations to create matrices.
+
+09:34.320 --> 09:39.720
+Obviously, this is right now a five by five three in which each element is a tuple.
+
+09:40.350 --> 09:43.950
+And within that we have in 64 comma in 64 values.
+
+09:43.950 --> 09:44.160
+Right.
+
+09:44.180 --> 09:49.770
+So in 64, in 64, one element is an array and the array itself is five by five.
+
+09:50.100 --> 09:50.880
+So I'll repeat that.
+
+09:51.000 --> 09:52.170
+Make sure that you understand this.
+
+09:52.170 --> 09:55.380
+We are slowly building the type system of Julia.
+
+09:55.560 --> 10:00.480
+We're building an understanding of this type system so that when you see very large, complicated data,
+
+10:00.870 --> 10:01.740
+you understand them.
+
+10:02.100 --> 10:07.200
+So once again, this is a five five three, because this is a five by five matrix.
+
+10:07.950 --> 10:09.890
+Each element itself is a tuple.
+
+10:10.530 --> 10:11.640
+So this is that tuple.
+
+10:13.180 --> 10:18.820
+The array itself is two dimensional because it has rules and it has columns, and within the double
+
+10:18.820 --> 10:20.970
+there are two elements.
+
+10:20.980 --> 10:24.790
+The first one is in 1864 and the second one is also in 64.
+
+10:25.540 --> 10:29.630
+As before we can go ahead and change each individual element to be something else.
+
+10:29.650 --> 10:30.810
+So this can be squared.
+
+10:31.630 --> 10:32.490
+So same thing.
+
+10:32.500 --> 10:36.220
+But this is going to go from one nine four nine six twenty five.
+
+10:36.400 --> 10:39.940
+We can also say Agere plus one or whatever function you want to use.
+
+10:39.940 --> 10:40.110
+Right.
+
+10:40.150 --> 10:41.890
+So seven, eight, nine, 10, 11.
+
+10:42.220 --> 10:44.010
+You can also do by two.
+
+10:44.440 --> 10:46.930
+So all of this works out great so you can have fractions.
+
+10:46.960 --> 10:52.540
+So now you have a five five three in which each element is a tuple.
+
+10:53.290 --> 10:58.660
+The first element of that tuple is in 1864 and the second is a rational.
+
+10:59.580 --> 11:02.090
+Off in 64.
+
+11:02.610 --> 11:04.060
+So now this is getting really complicated.
+
+11:04.080 --> 11:06.200
+Make sure that you pause and you understand this, OK?
+
+11:06.870 --> 11:08.730
+Finally, a couple of operations.
+
+11:08.730 --> 11:14.190
+So you're going to have a random array created, which is three by three.
+
+11:14.190 --> 11:18.060
+But instead of from zero to one, each element is going to be between 10 and 20.
+
+11:18.330 --> 11:23.140
+OK, so you have these insectivores and these are between 10 and 20, both inclusive.
+
+11:24.150 --> 11:28.290
+You can also convert them to floats by just setting this 10 to attend dot to 10.
+
+11:28.290 --> 11:33.540
+DOT is going to mean start from the float and go all the way up to 20 and the type promotion system
+
+11:33.540 --> 11:35.840
+in Julia is going to convert everything into floats.
+
+11:36.060 --> 11:40.460
+So this is an array of insectivores and this is an array of floats, 60 force.
+
+11:41.430 --> 11:46.350
+Instead of random values, we can provide a specific value using the field method so we can create a
+
+11:46.740 --> 11:49.050
+fill method in which we are going to have a.
+
+11:50.210 --> 11:51.350
+Three sized.
+
+11:52.310 --> 11:57.380
+And it's going to have the exact value, 10 X is going to have three tents over here.
+
+11:57.680 --> 12:03.440
+OK, now that we have this E and this X, we can go ahead and multiply them together.
+
+12:03.620 --> 12:08.510
+And the Syntex, because this is built in Julia, you can simply say into X and this is just going to
+
+12:08.510 --> 12:09.770
+work out perfectly.
+
+12:09.770 --> 12:09.960
+Right.
+
+12:09.980 --> 12:13.220
+So this is obviously a matrix vector multiplication.
+
+12:13.220 --> 12:15.830
+So you have the typical rule of law.
+
+12:15.830 --> 12:19.700
+Multiply that this vector and the second row multiply by this vector and the third rule multiplied by
+
+12:19.700 --> 12:22.010
+the sweater to give you the final result.
+
+12:22.590 --> 12:23.740
+So this works really well.
+
+12:25.510 --> 12:30.760
+We can also do basic operations like transport, so you can say a crime to get the transport.
+
+12:30.790 --> 12:34.930
+So this goes from 10, 15, 12 to 10, 15, 12.
+
+12:35.410 --> 12:37.600
+So it rolls into columns, columns and rows.
+
+12:37.840 --> 12:39.020
+That's the transport.
+
+12:39.370 --> 12:41.700
+You can also do a crime into it.
+
+12:42.100 --> 12:46.210
+And because this is a very common operation, Julia provides a shortcut.
+
+12:46.390 --> 12:52.220
+So you can even multiply saying you can say Ibrahimy and this is going to do the same operation.
+
+12:52.240 --> 12:53.620
+So this is very typical with Julia.
+
+12:53.860 --> 13:01.360
+Julia strives to make sure that it's Syntex matches the actual mathematics as closely as possible because
+
+13:01.360 --> 13:06.750
+that helps people translate research papers and research work, which is in mathematics into Julia.
+
+13:06.810 --> 13:07.160
+All right.
+
+13:07.180 --> 13:12.340
+So you're Julia, what is going to look very similar to the actual mathematics that is in research papers
+
+13:12.340 --> 13:14.050
+and in the state of the art work?
+
+13:15.340 --> 13:16.270
+You can do the trace.
+
+13:16.390 --> 13:21.640
+So trace of it is not defined because we need to do linear algebra for that.
+
+13:21.850 --> 13:24.060
+So we have the package using linear algebra.
+
+13:24.070 --> 13:29.590
+So recall that if this package gives you an error, you can do because you don't add linear algebra
+
+13:29.590 --> 13:31.720
+as we did in the very first video of this course.
+
+13:31.880 --> 13:33.990
+OK, so now you can do a trace of it.
+
+13:34.180 --> 13:39.240
+You can calculate the determinant very easily using the debt function and you can calculate the inverse,
+
+13:39.250 --> 13:42.010
+obviously, if it's possible to create the inverse.
+
+13:42.100 --> 13:44.630
+OK, you can solve linear equations directly.
+
+13:45.040 --> 13:48.280
+So, for instance, you have a which is a random variable.
+
+13:48.280 --> 13:50.260
+You have an X, which we already have.
+
+13:50.680 --> 13:52.350
+You can say B is equal to eight weeks.
+
+13:52.360 --> 13:53.440
+So that creates the B.
+
+13:53.710 --> 13:59.590
+And if you recall, if you have this into X is equal to B, you can calculate the actual values.
+
+14:01.830 --> 14:04.410
+And solve for B, right, so you can say a baby.
+
+14:05.730 --> 14:07.110
+And it gives you the actual values.
+
+14:07.150 --> 14:13.440
+OK, so as you can see, it's very close and this isn't exactly ten point zero because of floating point
+
+14:13.440 --> 14:16.180
+arithmetic in computers, but this works out really well night.
+
+14:16.230 --> 14:17.460
+So you get the blackout.
+
+14:17.700 --> 14:22.560
+If you don't understand this linear equations, if you don't remember your linear algebra, it's fine.
+
+14:22.560 --> 14:25.380
+You don't really need it for this course or even for machine learning.
+
+14:25.380 --> 14:28.830
+But I just want you to cover it to let you know that this is available.
+
+14:28.830 --> 14:28.920
+And.
+
+14:30.930 --> 14:35.520
+Finally, we've seen a two dimensional array, but you can go ahead and convert these into Tensas,
+
+14:35.520 --> 14:38.630
+which are larger dimensional matrices, so to say.
+
+14:38.820 --> 14:44.580
+So you can have a row column come in depth something else, so you can have a four dimensional rate
+
+14:44.610 --> 14:44.970
+as well.
+
+14:45.330 --> 14:47.930
+So now this is a forward into three to two or three.
+
+14:48.360 --> 14:53.100
+So these are now three dimensions, which you can think that this is Wednesday.
+
+14:53.370 --> 14:57.190
+And coming out from the screen is this other piece of paper.
+
+14:57.210 --> 15:01.200
+So think of these as two different pieces of paper lying on top of each other.
+
+15:01.600 --> 15:05.010
+So on the first paper, this is written and on the second paper.
+
+15:05.040 --> 15:05.500
+This is right.
+
+15:05.520 --> 15:08.330
+And so this is now kind of like a three dimensional structure.
+
+15:08.340 --> 15:13.890
+So instead of a two dimensional structure, which can be written on a paper, now you have a three dimensional
+
+15:13.890 --> 15:14.190
+structure.
+
+15:14.220 --> 15:18.550
+So this is called a pencil within intenser flow comes from, by the way.
+
+15:18.900 --> 15:19.880
+So these are Tensas.
+
+15:19.890 --> 15:23.070
+If you're not familiar with Tensas, we'll get to these when you get to machine learning.
+
+15:23.280 --> 15:29.490
+But for now, it's sufficient to say that you can create any number of dimensions using this index.
+
+15:29.490 --> 15:29.700
+Right.
+
+15:29.730 --> 15:33.080
+So now you have a four by three by two by five, three or four dimensions.
+
+15:34.020 --> 15:36.420
+You can see a lot more in this over here.
+
+15:36.480 --> 15:37.840
+So in this linear algebra.
+
+15:37.980 --> 15:43.290
+So on this link, you have all the functionality that is provided with the linear algebra package in.
+
+15:43.540 --> 15:44.260
+So this is built in.
+
+15:44.280 --> 15:45.840
+You don't have to install anything for this.
+
+15:46.020 --> 15:50.200
+So if you want to explore this further, you're welcome to go ahead for our purposes.
+
+15:50.250 --> 15:51.210
+This is all we need.
+
+15:51.390 --> 15:57.330
+And when you start doing data and machine learning, we'll come back to this and go through this once
+
+15:57.330 --> 15:57.630
+more.
+
+15:57.840 --> 16:01.740
+In the next year, we are going to take a look at some final thoughts about different data types.
+
+16:01.920 --> 16:06.390
+Those stereotypes aren't really used in machine learning and data science, but I'm including them here
+
+16:06.450 --> 16:07.650
+for the sake of completeness.

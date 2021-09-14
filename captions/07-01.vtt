@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.610 --> 00:04.780
+I hope you're having fun with this course and you are learning a lot in terms of what Julia can do,
+
+00:04.780 --> 00:08.410
+what Flux can do for you and how you can take your machine learning game to the next level.
+
+00:08.770 --> 00:12.490
+Now, I'm going to leave you with some parting words, and I'm going to give you some guidelines of
+
+00:12.490 --> 00:16.690
+how you can continue your learning based on the foundation that you have gotten from this course.
+
+00:17.350 --> 00:21.460
+The very first thing that you can do is you can search for Flux Julia model.
+
+00:22.000 --> 00:27.680
+This includes a lot of examples of how flux can be used to solve the state of the art latest models.
+
+00:28.030 --> 00:30.220
+So, for instance, you can if you do that, you search for that.
+
+00:30.220 --> 00:33.930
+You arrive at this model, which has a lot of stuff going on in this.
+
+00:33.940 --> 00:38.560
+So you have the user's students over here, how you can access it, all of that stuff.
+
+00:38.740 --> 00:40.930
+But a lot of this you've already done.
+
+00:40.930 --> 00:47.250
+For instance, if you go into the text character Orendain and character on an angle.
+
+00:47.260 --> 00:52.570
+So Julia Child over there, you can just download the script and run it using the command line as well,
+
+00:52.570 --> 00:55.960
+or you can take it to your notebook, but you will see that it's almost the same.
+
+00:55.960 --> 00:59.660
+So you get the data, you build the model and you define your loss.
+
+01:00.010 --> 01:01.420
+You set your optimizer.
+
+01:01.420 --> 01:03.850
+You define your callback function, and then you go train.
+
+01:04.210 --> 01:06.530
+So we've done all of these bits in our course.
+
+01:06.610 --> 01:09.760
+So now you should be able to do this model fairly straightforward.
+
+01:09.760 --> 01:13.860
+All the rest of the stuff around it is just loading the data and working with the data.
+
+01:13.870 --> 01:16.240
+So it's not going to be all that difficult.
+
+01:16.510 --> 01:18.880
+You can also go ahead and look at this again model.
+
+01:19.100 --> 01:23.940
+So the reason I'm showing you this is there are a lot of things that can be done in Julia.
+
+01:24.160 --> 01:29.170
+And if you start exploring these examples, you will come to understand this and please feel free to
+
+01:29.170 --> 01:30.940
+ask questions in the course.
+
+01:31.180 --> 01:34.030
+I would be happy to help out if you get stuck at any point.
+
+01:34.180 --> 01:38.210
+So, for instance, if you want to use the GPU, all you have to do is define your model.
+
+01:38.320 --> 01:39.320
+So this is your model.
+
+01:39.370 --> 01:46.630
+This function defines a model and say a pipe GPU that is going to ensure that your model now works on
+
+01:46.630 --> 01:47.050
+the GPU.
+
+01:47.050 --> 01:48.040
+It's as simple as that.
+
+01:48.340 --> 01:52.510
+So I haven't covered this in the course, but if you look at the code, it's going to be extremely straightforward.
+
+01:52.690 --> 01:59.560
+So all you have to do to take your model to your GPU is define your model and just pipe it to you.
+
+01:59.620 --> 02:05.040
+So here the device is going to be either GPU or CPU depending on what is available on your machine.
+
+02:05.260 --> 02:08.480
+So it's extremely easy if you start exploding this on your own.
+
+02:09.400 --> 02:10.960
+So that is related to flux.
+
+02:10.960 --> 02:13.420
+You can go to the models to start exploring the different models.
+
+02:13.520 --> 02:15.630
+If you get stuck, please feel free to ask questions.
+
+02:16.480 --> 02:18.940
+You can also go ahead and search for Julia.
+
+02:19.240 --> 02:21.130
+So this is a Julia Idy.
+
+02:21.370 --> 02:24.580
+It's fairly straightforward and it's state of the art.
+
+02:24.580 --> 02:26.650
+So Julia seems to be pushing this.
+
+02:27.460 --> 02:30.490
+You can see that it has an integrated development environment.
+
+02:30.490 --> 02:32.640
+You can run stuff over here and appear over here.
+
+02:32.980 --> 02:34.890
+I personally like to work with The Notebook.
+
+02:34.900 --> 02:41.020
+That is why I have covered this notebook approach in the course, because for me, I think it's much
+
+02:41.020 --> 02:43.450
+more easy to work with when you're doing experiments.
+
+02:43.450 --> 02:46.770
+But if you want to go with an idea, Julia is a really good way to go.
+
+02:47.110 --> 02:51.430
+You can also go ahead and take a look at some game changing packages for Julia so you can search for
+
+02:51.430 --> 02:51.670
+that.
+
+02:51.670 --> 02:55.660
+And you'll arrive at this link and you will see that you can do a lot of stuff.
+
+02:55.660 --> 02:59.710
+So we've already done you can do automatic differentiation if you're into that.
+
+02:59.890 --> 03:01.780
+You can do a mathematical optimization.
+
+03:01.870 --> 03:06.820
+You can do I guess there is a package for probabilistic machine learning.
+
+03:06.820 --> 03:10.840
+If you want to do Bayesian statistics, Bayesian entrance, if you want to do differential equations,
+
+03:10.840 --> 03:12.280
+that there is a package for this.
+
+03:12.550 --> 03:14.950
+And all of these have really good documentations.
+
+03:14.950 --> 03:16.570
+For instance, if you go to during.
+
+03:18.170 --> 03:25.490
+You can see that it has a detailed documentation over here, you can go to getting started and just
+
+03:25.490 --> 03:29.740
+add the baggage and this is the go to the Bayesian probabilistic modelling in Julia.
+
+03:29.740 --> 03:30.900
+So it's fairly straightforward.
+
+03:30.920 --> 03:32.000
+It works really well.
+
+03:32.210 --> 03:36.500
+And you can go ahead and start exploring all of these packages, Julie, as a huge ecosystem.
+
+03:36.500 --> 03:37.650
+And it's growing day by day.
+
+03:37.910 --> 03:40.310
+So the more you explore, the more you're going to learn.
+
+03:40.740 --> 03:45.560
+Hope you had fun with this, cause I would really appreciate a good rating and any feedback that you
+
+03:45.560 --> 03:49.190
+might have related to the course, anything that you want me to add to the cause.
+
+03:49.190 --> 03:50.980
+I intend to keep updating the course.
+
+03:51.440 --> 03:53.930
+So please feel free to ask questions about this.
+
+03:53.930 --> 03:55.940
+And I hope you have a really good experience with Julia.
+
+03:56.240 --> 03:56.770
+Best of luck.

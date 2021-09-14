@@ -1,0 +1,553 @@
+WEBVTT
+
+00:00.820 --> 00:05.410
+Let's go ahead and apply these concepts on a slightly more involved history, the example that we've
+
+00:05.410 --> 00:08.120
+picked is the clustering of housing data.
+
+00:08.500 --> 00:11.230
+So this is the housing data for California.
+
+00:11.680 --> 00:16.060
+And we are going to take a look at real world data set for clustering.
+
+00:16.090 --> 00:20.590
+The reason for that is if you try to do clustering on data, it's very easy and it doesn't really tell
+
+00:20.590 --> 00:25.640
+you the importance of clustering and it doesn't really help you understand the concept fully.
+
+00:25.900 --> 00:32.020
+So we are going to load these houses, data from this file data, slash houses and new houses, dot
+
+00:32.020 --> 00:36.790
+CSFI and we are going to convert it into a data frame, just as we did previously.
+
+00:37.540 --> 00:44.640
+So the columns that we have in this data set of longitude, latitude and the housing median age to rooms,
+
+00:44.650 --> 00:46.050
+number of bedrooms, population.
+
+00:46.210 --> 00:46.840
+So all of that.
+
+00:47.230 --> 00:50.500
+So these are the columns that we have over here in this case study.
+
+00:50.500 --> 00:57.010
+We are interested in the longitude and latitude, which essentially tell us where the house is within
+
+00:57.010 --> 01:00.950
+the city and in the median income or median house value.
+
+01:01.210 --> 01:06.440
+So we are trying to figure out where the more expensive houses are or where the rich people.
+
+01:06.550 --> 01:09.640
+So do they live within this location?
+
+01:09.970 --> 01:13.020
+So for this, we are going to use a library, which is very light.
+
+01:13.030 --> 01:18.010
+So this is really useful for doing map based visualizations.
+
+01:18.040 --> 01:23.350
+We want to actually look at the real world map and plot these values on that map instead of trying to
+
+01:23.350 --> 01:25.910
+do this on a graph paper like visualization.
+
+01:25.930 --> 01:32.290
+OK, so we are going to use the JSON package for reading the California county's information, which
+
+01:32.290 --> 01:34.460
+we've downloaded, and it's available in the data folder.
+
+01:35.020 --> 01:40.900
+We are going to use the Wagonlit and Vigor data sets for doing the maps and map based information.
+
+01:41.350 --> 01:43.800
+If you don't have them installed, you can install them using these cells.
+
+01:44.050 --> 01:46.660
+I already have them installed, so I'm just going to start using them.
+
+01:47.170 --> 01:49.780
+We are going to read California County's Doges and file.
+
+01:49.780 --> 01:52.930
+This essentially gives information about the shape of the map.
+
+01:53.260 --> 01:58.210
+And then we are going to read this week adjacent dataset, essentially both of these combined.
+
+01:58.420 --> 02:01.240
+Give us the information about the map that we want to draw.
+
+02:01.370 --> 02:03.220
+OK, we don't have to draw them by hand.
+
+02:03.220 --> 02:04.980
+We just have this dataset available.
+
+02:05.200 --> 02:09.610
+And Julia has this functionality provided to you transparently.
+
+02:09.700 --> 02:10.390
+So we done that.
+
+02:11.020 --> 02:16.090
+And now we are going to use these real plot macros which are provided by the very light package.
+
+02:16.390 --> 02:20.290
+And we are going to use the syntax of Wagonlit to do the plotting.
+
+02:20.620 --> 02:25.150
+Now, since we are not really interested in whether I am providing the syntax over here, you can just
+
+02:25.150 --> 02:28.420
+look at this and try experimenting with this to get a better understanding.
+
+02:28.420 --> 02:29.940
+But this really isn't our concern.
+
+02:30.340 --> 02:33.480
+What does concern us are these lines over here.
+
+02:33.490 --> 02:34.810
+So we'll see what these are in a minute.
+
+02:35.080 --> 02:40.210
+But just for the sake of completeness, we are going to put the marks which are going to represent houses
+
+02:40.360 --> 02:41.350
+on top of the map.
+
+02:41.530 --> 02:43.510
+So we are going to have a geographical shape.
+
+02:43.720 --> 02:46.270
+It's going to have the fill of black and the stroke of white.
+
+02:46.600 --> 02:51.550
+And the data that we are going to show it is the county data that we have over here.
+
+02:51.580 --> 02:53.940
+So all of these are coming from this dataset.
+
+02:54.000 --> 02:57.940
+Get the actual plot is overlaid.
+
+02:57.940 --> 03:03.790
+The housing data is overlaid on top of this map using the plus and add real plot index.
+
+03:04.120 --> 03:06.340
+Each house is going to be plotted using a circle.
+
+03:06.820 --> 03:08.890
+The data is going to come from the houses.
+
+03:09.250 --> 03:15.040
+Data frame that we have up above the latitude and longitude are going to define the location of the
+
+03:15.040 --> 03:15.450
+circle.
+
+03:15.640 --> 03:22.000
+The size is going to be at twelve and the color is going to be representing the median house value that
+
+03:22.000 --> 03:22.590
+we have over here.
+
+03:22.700 --> 03:27.070
+OK, so let's just run this to see what it looks like and that makes sense.
+
+03:28.090 --> 03:29.820
+So you might get some warnings over here.
+
+03:29.830 --> 03:31.180
+It's not really all that important.
+
+03:31.190 --> 03:32.560
+It doesn't affect the output.
+
+03:33.520 --> 03:36.190
+Just notice that this syntax is not Julia.
+
+03:36.280 --> 03:37.360
+This is begger.
+
+03:37.360 --> 03:38.860
+And it's not really our concern.
+
+03:38.860 --> 03:41.390
+We're just using it for the actual output of the plot.
+
+03:41.800 --> 03:48.720
+So this is what looks like a black map, white strokes and the houses are over here.
+
+03:48.730 --> 03:52.740
+So the more expensive houses are in darker color.
+
+03:52.750 --> 03:59.440
+So they are over here and the least expensive houses are in lighter color and they are slightly away
+
+03:59.440 --> 04:01.150
+from the beachfront.
+
+04:01.160 --> 04:07.270
+So this over here on the west is the beachfront and the more expensive houses are on that beachfront.
+
+04:07.270 --> 04:07.430
+Right.
+
+04:07.450 --> 04:08.110
+So it makes sense.
+
+04:08.980 --> 04:13.450
+What we are trying to do now is cluster these values using two different methods.
+
+04:13.660 --> 04:15.280
+One is going to be simple budgeting.
+
+04:15.490 --> 04:21.980
+So we are going to take this whole range and we are going to split it into one hundred thousand sized
+
+04:22.000 --> 04:22.480
+buckets.
+
+04:22.660 --> 04:26.410
+So from zero to one hundred thousand is going to be one bucket from hundred thousand.
+
+04:26.410 --> 04:28.590
+Two hundred thousand is going to be another bucket.
+
+04:28.600 --> 04:34.270
+So we are going to have five buckets over here and we are going to instead of putting all these individual
+
+04:34.270 --> 04:39.910
+houses which don't really tell us the spread, we are going to put them into five different buckets.
+
+04:40.420 --> 04:43.810
+So let's go ahead and first convert the data into buckets.
+
+04:44.110 --> 04:46.440
+So we are going to build this piece by piece.
+
+04:46.450 --> 04:48.100
+So look at this piece first.
+
+04:48.460 --> 04:51.700
+What this does is it goes into the housing data frame.
+
+04:52.600 --> 04:54.730
+It retrieves all the rows.
+
+04:55.090 --> 04:57.850
+So you would recall that for all the rows we use the column.
+
+04:58.240 --> 05:00.220
+But what the color does is it gives you a.
+
+05:00.380 --> 05:05.270
+Copy of the data back, we don't want to create a copy because this might be a very large data set and
+
+05:05.270 --> 05:07.080
+we want to just use the data.
+
+05:07.100 --> 05:10.950
+So this is going to be a view into the same structure.
+
+05:11.480 --> 05:12.800
+It's not going to create a copy.
+
+05:12.800 --> 05:14.990
+And for that, we use the exclamation mark.
+
+05:15.230 --> 05:18.220
+So and Rita Cosby exclamation mark just gives you a view.
+
+05:18.230 --> 05:21.300
+You can look at it, but it will not be copied in memory.
+
+05:21.380 --> 05:22.960
+OK, so it's a lot more efficient.
+
+05:23.150 --> 05:24.450
+You can use Colen as well.
+
+05:24.470 --> 05:27.800
+It won't affect it, but it's going to jog the memory down.
+
+05:28.160 --> 05:31.040
+The column that we're interested in is the median house value.
+
+05:31.070 --> 05:36.290
+So what this does is it gives us the median house values of all the houses.
+
+05:36.320 --> 05:36.790
+That's it.
+
+05:37.400 --> 05:44.180
+Then we go ahead and apply the divide function and we divide it by one hundred thousand except divide
+
+05:44.180 --> 05:47.240
+function works on two scalar values, so we have to broadcast it.
+
+05:47.250 --> 05:51.190
+So it's going to essentially divide all the values by a hundred thousand.
+
+05:51.680 --> 05:56.660
+After that we convert it into an integer and again we have to broadcast it because integer works on
+
+05:56.840 --> 05:58.120
+individual scalar values.
+
+05:58.520 --> 06:05.540
+So essentially we take the housing median value of one data point divided by 100000 and convert it into
+
+06:05.540 --> 06:09.830
+an integer and that essentially gives us a value between zero and five.
+
+06:10.690 --> 06:11.250
+That makes sense.
+
+06:11.450 --> 06:15.890
+So take, for instance, the value of one hundred thousand divided by a hundred thousand.
+
+06:16.070 --> 06:19.850
+That gives us one point zero and convert it into an integer.
+
+06:19.880 --> 06:20.720
+This is going to be one.
+
+06:21.010 --> 06:26.510
+OK, so these are the values that we get for three three three two zero one and so on.
+
+06:26.990 --> 06:29.540
+The extreme martellus that we are going from zero to five.
+
+06:29.570 --> 06:30.470
+That makes sense as well.
+
+06:31.130 --> 06:34.850
+Now we are going to insert these into the data that we have.
+
+06:34.850 --> 06:36.940
+So we are going to use the insert called function.
+
+06:37.490 --> 06:39.590
+We are going to insert into the houses.
+
+06:39.590 --> 06:42.380
+Data from the index of the column is going to be three.
+
+06:42.680 --> 06:47.960
+The name of the column is going to be surprised and the actual values are going to come from this structure
+
+06:47.960 --> 06:48.840
+that we just created.
+
+06:49.120 --> 06:49.460
+OK.
+
+06:50.330 --> 06:55.400
+So once we do that, our houses data is going to look like they saw one, two and three.
+
+06:55.640 --> 06:56.720
+This is surprise.
+
+06:56.750 --> 07:00.820
+This column has just been inserted based on the values that we had in the bucket price.
+
+07:00.950 --> 07:02.760
+OK, so we have these over here.
+
+07:02.990 --> 07:05.270
+Let's go ahead and plot these using the exact same code.
+
+07:05.270 --> 07:08.410
+Except now we are using see price as the color.
+
+07:08.600 --> 07:12.420
+And this end means that this is an integer value, not a quantitative value anymore.
+
+07:12.800 --> 07:13.790
+So there you go.
+
+07:15.210 --> 07:20.490
+So if you get the same warnings and by doing this, we are going to get an output and this is going
+
+07:20.490 --> 07:21.530
+to be sort of a clustering.
+
+07:21.540 --> 07:22.830
+So this is a very basic clustering.
+
+07:22.830 --> 07:24.750
+It's not very efficient, but it works.
+
+07:24.990 --> 07:28.250
+So it tells us that the zero prices are way over here.
+
+07:28.410 --> 07:30.810
+And then these guys are slightly more expensive.
+
+07:30.810 --> 07:35.040
+And the most expensive ones, which are in five, are again on the beachfront.
+
+07:35.310 --> 07:37.660
+So same data, but now it's in buckets.
+
+07:37.680 --> 07:39.270
+So a lot more easier to understand.
+
+07:39.600 --> 07:42.990
+So this visualization is slightly better than this visualization.
+
+07:43.530 --> 07:46.940
+We can go ahead and do a typical clustering using Kamins.
+
+07:47.340 --> 07:50.100
+So again, because this is a case study, we are using Cayman's.
+
+07:50.100 --> 07:53.080
+You can use another method as well, but gaming's is the most common.
+
+07:53.100 --> 07:54.330
+So let's go ahead and do that.
+
+07:54.390 --> 07:55.920
+This comes from the clustering package.
+
+07:56.490 --> 07:58.020
+So we're going to do using clustering.
+
+07:58.530 --> 08:02.780
+We are going to drop the missing values because gaming's does not work with missing values.
+
+08:03.060 --> 08:03.990
+We are going to do that.
+
+08:04.380 --> 08:05.010
+And then.
+
+08:06.350 --> 08:13.490
+We are going to do the clustering based on the median house values again, so same thing.
+
+08:13.700 --> 08:19.880
+You go to housing data frame, you get all the rules, and from that you get just the median house value
+
+08:20.660 --> 08:21.080
+column.
+
+08:21.320 --> 08:25.790
+OK, and because we have eight exclamation mark over here, we are going to select in place.
+
+08:25.790 --> 08:27.060
+No copy is going to be created.
+
+08:27.080 --> 08:28.430
+So that is what we get.
+
+08:28.430 --> 08:28.820
+Index.
+
+08:29.360 --> 08:30.050
+So now index.
+
+08:30.080 --> 08:32.900
+We have twenty thousand give or take values.
+
+08:33.470 --> 08:36.550
+The problem is that this, as you can see, is a column.
+
+08:36.920 --> 08:39.410
+So two zero four three three rows and just one column.
+
+08:39.420 --> 08:46.730
+So it's vertically aligned and it's a column gaming's as it is in the library, requires a row vector.
+
+08:46.970 --> 08:50.040
+So we are going to convert it using the matrix function.
+
+08:50.060 --> 08:54.200
+So first it's going to be converted into a matrix and then we take the transpose and we get the row
+
+08:54.200 --> 08:54.740
+vector back.
+
+08:55.190 --> 08:58.690
+So this is just data wrangling to make sure that it works with our library.
+
+08:58.970 --> 09:05.000
+And we are going to call means give it this data and tell it to sort it into five buckets.
+
+09:05.450 --> 09:07.620
+So that's all you need for clustering.
+
+09:07.640 --> 09:09.110
+You get the values out.
+
+09:09.380 --> 09:15.140
+OK, now you can go ahead and insert these values into your houses dataset just as before.
+
+09:15.140 --> 09:17.560
+And this time we are going to collect and squawky.
+
+09:18.440 --> 09:20.630
+So we have this over here cluster in this cookie.
+
+09:20.720 --> 09:21.980
+And these are the cluster values.
+
+09:22.100 --> 09:27.560
+As you can see, these are slightly different from the C price values that we got, but they have essentially
+
+09:27.560 --> 09:28.240
+the same purpose.
+
+09:28.610 --> 09:32.870
+We are going to plot this and this time the color is going to be based on the gaming's cluster.
+
+09:33.290 --> 09:34.430
+So once you do that.
+
+09:35.510 --> 09:40.070
+You get a very similar plot out, but K means clustering looks slightly better, so you get a much more
+
+09:40.070 --> 09:43.250
+real world representation of the clusters that you have.
+
+09:43.490 --> 09:50.250
+So these are the slightly mid-range things and the more expensive ones are over here, as you can see.
+
+09:50.430 --> 09:55.280
+OK, so hopefully this gave you a good idea about how to do clustering.
+
+09:55.550 --> 09:59.300
+The actual clustering is just this one line over here.
+
+09:59.910 --> 10:01.340
+So just this one line.
+
+10:01.760 --> 10:04.400
+Give it a raw vector and it works out of the box.
+
+10:04.640 --> 10:09.470
+And the rest of the stuff is just data wrangling to make sure that our data works with the clarity that
+
+10:09.470 --> 10:10.080
+we have over here.
+
+10:10.400 --> 10:11.570
+So hopefully this made sense.
+
+10:11.810 --> 10:17.630
+In the next video, we are going to go into a slightly more interesting example, which is classification.
+
+10:17.750 --> 10:23.480
+And after that, we are going to move on to the most popular aspect of Julia, which is machine learning.

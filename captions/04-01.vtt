@@ -1,0 +1,268 @@
+WEBVTT
+
+00:00.820 --> 00:03.910
+You've now seen all the core Syntex of Julia language.
+
+00:04.540 --> 00:07.540
+There are a couple of things left, but we'll get to them when we need them.
+
+00:07.570 --> 00:13.150
+So now we are in the position to go ahead and do some actual data science and machine learning using
+
+00:13.150 --> 00:14.220
+the concepts that we've learned.
+
+00:14.590 --> 00:18.580
+So let's start off with one of the most interesting aspects of data science, which is prodding.
+
+00:19.210 --> 00:24.940
+If you're familiar with Python and matplotlib, you would know that matplotlib syntax is a little wonky.
+
+00:25.330 --> 00:29.140
+But here we have a very clean syntax and semantics of plotting.
+
+00:29.320 --> 00:31.000
+So in this video, we are going to take a look at that.
+
+00:31.330 --> 00:36.640
+What you first want to do is install the plots package, which is essentially the interface to all the
+
+00:36.640 --> 00:37.000
+plotting.
+
+00:37.000 --> 00:38.500
+And Julia, I've already done that.
+
+00:38.500 --> 00:40.990
+So I'm not going to run this cell after that.
+
+00:40.990 --> 00:46.180
+You need to do using plot and then you can create some very simple plots using the plot function.
+
+00:46.480 --> 00:50.110
+When you run this, you will notice that the first time you tried to do a plot, it's going to take
+
+00:50.110 --> 00:50.950
+a little bit of time.
+
+00:51.820 --> 00:56.880
+The reason for that is Julia does all the compilations necessary to speed it up later on.
+
+00:57.040 --> 00:59.260
+So the first plot is going to take a little bit of time.
+
+00:59.560 --> 01:00.520
+So let's go ahead and do that.
+
+01:00.820 --> 01:02.230
+So you call the plot function.
+
+01:02.260 --> 01:08.470
+The first parameter is the function that should be plotted and the second is the range on the x axis
+
+01:08.710 --> 01:10.350
+from where it should start.
+
+01:10.360 --> 01:12.470
+So from minus two PI to Dubai.
+
+01:12.490 --> 01:16.310
+So this is the range for which the plot is going to be created for us.
+
+01:16.330 --> 01:20.710
+So we run that and wait for it to do the pre compilation and get everything ready.
+
+01:20.740 --> 01:23.460
+So this is going to take a couple of seconds and then you see the plot.
+
+01:23.860 --> 01:26.370
+So as you can see, this looks really clean.
+
+01:26.410 --> 01:30.670
+Very nice plot out of the box, much prettier than the Metalocalypse defaults.
+
+01:31.360 --> 01:37.630
+Now, because this sign is a function, we can also posit an anonymous function, which can be a lot
+
+01:37.630 --> 01:38.310
+more complicated.
+
+01:38.320 --> 01:43.000
+So you can say a function which takes one parameter, which is going to be each individual value for
+
+01:43.000 --> 01:51.160
+the X axis, and it's going to plot the sine square X and cost cubed X it together so you can do any
+
+01:51.160 --> 01:53.890
+sort of complex function plotting using this index.
+
+01:54.100 --> 01:55.570
+So this looks really nice.
+
+01:56.650 --> 02:01.600
+Obviously, when you do real well plotting, you're going to be interested in some data and we'll get
+
+02:01.600 --> 02:02.600
+to that in the next video.
+
+02:03.160 --> 02:07.960
+For now, let's take a look at some of the other Syntex details so you can give it the label, you can
+
+02:07.960 --> 02:10.020
+give it the X label, Y label and the title.
+
+02:10.330 --> 02:16.540
+So when you do that, you will see that the label for the negative log function that we are plotting
+
+02:16.780 --> 02:17.650
+goes in the legend.
+
+02:17.660 --> 02:24.460
+So minus log X goes over, their Y label is set using the available argument and X label using the label.
+
+02:24.910 --> 02:26.000
+So this works out really well.
+
+02:26.170 --> 02:30.020
+So this minus log X is very useful when you do machine learning and classification.
+
+02:30.070 --> 02:31.720
+So that's why I just wanted to plot this.
+
+02:31.780 --> 02:36.040
+OK, so this shows you the details of the plotting library in its basics.
+
+02:36.670 --> 02:38.820
+Now let's go ahead and plot some specific values.
+
+02:38.860 --> 02:41.520
+So, for instance, we are going to have X go from one to 10.
+
+02:41.890 --> 02:47.740
+So this is range and Y values are going to be just ten random values.
+
+02:47.800 --> 02:49.540
+OK, so let's go ahead and do that.
+
+02:49.730 --> 02:52.390
+So we have Y and X values out.
+
+02:52.720 --> 02:58.390
+We can go ahead and plot Y one using plot X, comma Y, one common level is going to Vivan.
+
+02:58.930 --> 03:02.230
+This is going to do the plot for the values that we have over here.
+
+03:02.770 --> 03:07.450
+If we want to add another line to this, we can use the bank variant of the plot function.
+
+03:07.780 --> 03:12.850
+So if you recall, bang means it's going to do some sort of a modification and the modification is going
+
+03:12.850 --> 03:14.390
+to be on this plot.
+
+03:14.620 --> 03:20.500
+So this second plot function with a bang is going to modify the plot by inserting the second series
+
+03:20.500 --> 03:21.010
+onto it.
+
+03:21.620 --> 03:25.480
+So if this seems too verbose for you, there is an easier way to do this.
+
+03:25.480 --> 03:30.600
+So you can say plot X and for Y axis, you can give it a collection of elements.
+
+03:30.610 --> 03:30.780
+Right.
+
+03:30.810 --> 03:37.420
+So to erase each holding the values that you want to plot and you can give them both a label, which
+
+03:37.420 --> 03:42.370
+we are setting as first and second over here and notice that there is no comma in between.
+
+03:42.760 --> 03:43.900
+So this is kind of a vector.
+
+03:44.230 --> 03:48.430
+And the reason for that is because typically when you're working with vectors, it's much easier.
+
+03:48.880 --> 03:50.860
+Obviously, Julia is still under development.
+
+03:50.890 --> 03:54.370
+So this might change, but this is as it stands at the moment.
+
+03:54.640 --> 03:56.770
+OK, so we have the same plot over here.
+
+03:57.430 --> 04:02.490
+We can convert this into a scatterplot by setting the series type as call and scatter.
+
+04:02.500 --> 04:06.760
+If you recall, this is a symbol and you don't have to enclose it in double Gord's.
+
+04:07.030 --> 04:08.620
+It works out just as a symbol.
+
+04:08.650 --> 04:12.660
+OK, so you do the plot and this is what it looks like.
+
+04:12.760 --> 04:13.650
+It's a Y one.
+
+04:13.660 --> 04:15.550
+Why do the colors?
+
+04:15.550 --> 04:20.890
+I am not really fond of the particular values over here so we can go ahead and change them so we can
+
+04:20.890 --> 04:25.690
+change the Tichnor scaling to zero point seven and we can go ahead and change the passages two point
+
+04:25.690 --> 04:26.020
+eight.
+
+04:26.050 --> 04:28.930
+And to me it looks a lot cleaner this way.
+
+04:29.220 --> 04:36.250
+OK, finally, we can go ahead and do a lot of plotting so we can have four different cities and we
+
+04:36.250 --> 04:41.800
+can pass them to the plot function and we can set the palette as doc to underscore five.
+
+04:41.800 --> 04:43.930
+And that gives you this guy over here.
+
+04:44.320 --> 04:47.070
+So it depends on which color palette you're interested in.
+
+04:47.260 --> 04:50.830
+We have a detailed list of pilots over here that you can go check them out.
+
+04:51.010 --> 04:55.630
+Similarly on this link, you can go ahead and check all the different attributes that are available
+
+04:55.630 --> 04:56.480
+for the plot function.
+
+04:56.860 --> 04:59.740
+There is a lot to unpack over here, but this is the basic.
+
+04:59.810 --> 05:00.830
+And this can get you started.
+
+05:01.220 --> 05:05.990
+We want to move on to more interesting things, and I encourage you to go ahead and follow these links
+
+05:06.170 --> 05:08.540
+and explore the different options that are available.
+
+05:08.750 --> 05:13.100
+In the next video, we are going to take a look at loading some data and then working with that data
+
+05:13.400 --> 05:15.880
+instead of plotting some random values.

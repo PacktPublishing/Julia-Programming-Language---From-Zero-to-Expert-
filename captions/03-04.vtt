@@ -1,0 +1,205 @@
+WEBVTT
+
+00:01.050 --> 00:07.440
+Let's finish off the section on functions by looking at one of the core strengths of Julia, that is
+
+00:07.710 --> 00:14.130
+if you already have an ecosystem of Python libraries or our libraries that you are familiar with, you
+
+00:14.130 --> 00:18.600
+don't have to ditch them completely and move over to Julia in all its entirety.
+
+00:19.050 --> 00:23.670
+Julia, people realize that it's a niche language and some people are going to be interested in using
+
+00:23.670 --> 00:25.890
+it for specific purposes, but not for everything.
+
+00:26.010 --> 00:26.240
+Right.
+
+00:26.310 --> 00:32.250
+So they have, in the core of the language, created this capability of calling Python's libraries.
+
+00:32.250 --> 00:32.480
+Right.
+
+00:32.790 --> 00:36.220
+So if you have something running in Python, you can call it from Julia.
+
+00:36.270 --> 00:37.050
+It's very easy.
+
+00:37.260 --> 00:43.650
+So let's begin by installing the Baycol package so you can use this syntax or the because you don't
+
+00:43.650 --> 00:44.250
+add syntax.
+
+00:44.490 --> 00:45.270
+Install Baycol.
+
+00:45.300 --> 00:50.460
+I'm not going to do that because I've already done that before and we're going to be using Bicol.
+
+00:50.700 --> 00:57.450
+And all you have to do is say math is you going to buy, import and give the name of the building python
+
+00:57.450 --> 00:58.660
+package that you want to use.
+
+00:59.160 --> 01:02.130
+So we have by import math and now you can say math.
+
+01:02.130 --> 01:05.820
+Daudzai in math dropped by by four and this just works out of the box.
+
+01:06.060 --> 01:09.620
+So this is being called from the actual Python interpreter.
+
+01:09.630 --> 01:15.540
+So there is a python going on and it calls that Python interpreter and that does the work for it so
+
+01:15.720 --> 01:17.580
+we can do math or squirrelled all of that stuff.
+
+01:18.270 --> 01:19.230
+But these are Belton's.
+
+01:19.900 --> 01:22.690
+What if you want to use a piece of Python code that you've written yourself?
+
+01:22.950 --> 01:26.190
+So for instance, I have written this by accident, by file over here.
+
+01:26.520 --> 01:32.400
+It's a very simple file which has the square root function and it simply outputs the square root.
+
+01:32.400 --> 01:32.580
+Right.
+
+01:32.670 --> 01:33.900
+So it just returns that string.
+
+01:34.620 --> 01:35.460
+I want to use that.
+
+01:35.700 --> 01:41.730
+So what we're going to do is we are going to pay import and we are going to first give it the part of
+
+01:41.730 --> 01:42.780
+the current directory.
+
+01:42.790 --> 01:48.210
+So BWB gets the current directory and we are going to add that into the python part.
+
+01:48.510 --> 01:50.730
+So this kind of setting the path for the imports.
+
+01:50.970 --> 01:55.050
+So we do that and then we can say Buycks is you can do by, import by.
+
+01:55.230 --> 01:57.930
+So this is the name of the file that you have over here.
+
+01:58.320 --> 02:03.420
+You can say by import that and then you can simply say by extorts square root 36 and this is going to
+
+02:03.420 --> 02:05.010
+return that value for you.
+
+02:05.520 --> 02:06.480
+So this works really well.
+
+02:07.970 --> 02:11.500
+If you change the file, so, for instance, you go over there and you make some changes over here,
+
+02:11.780 --> 02:17.120
+so let's say let's put three dots over here if you want to call it now, you want to reload it because
+
+02:17.120 --> 02:17.810
+it has changed.
+
+02:17.960 --> 02:22.220
+So you can say pinboard in Portland and from that you can reload by X.
+
+02:22.640 --> 02:26.880
+And now if you try to call it, you get the latest code reflected over here.
+
+02:26.900 --> 02:30.650
+So as simple as that, you can use any python code that you have over there.
+
+02:30.680 --> 02:32.090
+There are no restrictions.
+
+02:32.300 --> 02:37.040
+And the reason for that is this code is actually being run by the Python interpreter.
+
+02:37.040 --> 02:40.560
+So whatever Python can run, you can run from Julia as well.
+
+02:40.610 --> 02:40.740
+Right.
+
+02:40.790 --> 02:44.750
+So very clean, very easy to work with these two languages side by side.
+
+02:46.230 --> 02:51.630
+So it's the same for ah, so I don't have it installed on this machine of mine, but if you do, you
+
+02:51.630 --> 02:56.820
+can simply go ahead and add the Arkell package and then using outcall and then you can go ahead and
+
+02:56.820 --> 03:04.500
+define any Matrix in your Juliar namespace, have a vector over here and then simply go ahead and create
+
+03:04.500 --> 03:08.310
+a wire using a linear combination of those you can output them.
+
+03:08.730 --> 03:11.780
+So these are Julia variables.
+
+03:12.000 --> 03:13.390
+Nothing fancy going on over here.
+
+03:13.580 --> 03:19.620
+OK, now you can go ahead and put this into the R runtime using output.
+
+03:19.860 --> 03:22.440
+So this goes into this goes into R as well.
+
+03:22.650 --> 03:28.760
+And then you can do something in R such as modelling, etc. So Aagaard is going to take care of that.
+
+03:28.950 --> 03:35.820
+And then once it does its thing, the result is going to be in Z and you can do Arget to get that result
+
+03:35.820 --> 03:37.440
+back and then show it in Julia.
+
+03:37.440 --> 03:42.930
+So output and arget and anything in the middle is going to be the outcome that you want to run.
+
+03:42.960 --> 03:44.310
+So again, very transparent.
+
+03:44.490 --> 03:49.260
+You can work with this really easily, but when you're just getting started, you don't even need this,
+
+03:49.260 --> 03:50.280
+especially in this course.
+
+03:50.280 --> 03:53.340
+We're not going to call any python or R from our Julia code.
+
+03:53.340 --> 03:57.870
+We are going to stick to Julia and do everything within this ecosystem so that you can get used to it.
+
+03:58.140 --> 04:02.580
+In the next video, we are going to go back to the Julia Bocian and take a look at some really interesting
+
+04:02.580 --> 04:09.180
+stuff, such as plotting, and then start with our concepts of actual data science and later on, turn
+
+04:09.180 --> 04:09.810
+to machine learning.

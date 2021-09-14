@@ -1,0 +1,673 @@
+WEBVTT
+
+00:01.080 --> 00:03.070
+We've already used functions in the previous videos.
+
+00:03.270 --> 00:09.690
+Now let's go ahead and define functions using the basic syntax so the semantics of most of this stuff
+
+00:09.690 --> 00:10.860
+will be already clear to you.
+
+00:11.050 --> 00:13.050
+But we're going to see how Julia approaches this.
+
+00:13.530 --> 00:15.560
+So let's first define a basic function.
+
+00:15.810 --> 00:21.570
+So for that, you use the key word function and you end the function by using the keyword.
+
+00:21.820 --> 00:25.650
+So that's how Julia defines blocks within the function.
+
+00:25.680 --> 00:26.820
+You can have multiple lines.
+
+00:27.090 --> 00:30.360
+Indentation is not important, obviously, for blocks.
+
+00:30.570 --> 00:35.430
+One important difference to note over here is that we don't necessarily need a return statement over
+
+00:35.430 --> 00:35.700
+here.
+
+00:35.940 --> 00:41.670
+If you say X into X, this is going to be the last line that is going to be executed when this function
+
+00:41.670 --> 00:42.130
+is called.
+
+00:42.390 --> 00:45.980
+So this value of X into X is going to be automatically returned.
+
+00:46.320 --> 00:50.110
+You have the parameter X over here and we can go ahead and call this function.
+
+00:50.130 --> 00:51.360
+So let's first define this.
+
+00:52.880 --> 00:56.960
+And then we can go ahead and call this using square four and this is going to return the value.
+
+00:58.220 --> 01:03.020
+So you don't need the return couverture here, but it's still a good practice to include it just to
+
+01:03.020 --> 01:04.520
+make your code a little more readable.
+
+01:04.740 --> 01:06.920
+OK, it depends on who you ask.
+
+01:06.950 --> 01:10.020
+Some people prefer it and some people say it should be without the return.
+
+01:10.040 --> 01:13.610
+It depends on who you ask, but personally, I prefer to have a written statement.
+
+01:14.060 --> 01:15.880
+OK, so we have the square function.
+
+01:16.280 --> 01:18.760
+You will notice that we don't have a data type over here.
+
+01:18.770 --> 01:19.690
+So it's implicit.
+
+01:20.000 --> 01:25.760
+So if you have hello name and we simply print the value of it here, we can go ahead and call hello
+
+01:25.770 --> 01:27.320
+with the string parameter.
+
+01:27.590 --> 01:29.520
+So it's going to print their world.
+
+01:29.870 --> 01:31.700
+We can also posit an integer.
+
+01:32.000 --> 01:35.810
+So this is obviously going to work perfectly fine because name can hold any different data.
+
+01:36.350 --> 01:42.040
+We can even create a matrix over here using round function and pass that to hello.
+
+01:42.050 --> 01:43.140
+And that is still going to work.
+
+01:43.160 --> 01:48.130
+So anything will print as long as it can be converted into the string.
+
+01:48.140 --> 01:48.350
+Right.
+
+01:48.370 --> 01:49.710
+So this works perfectly fine.
+
+01:49.970 --> 01:52.430
+So this is probably stuff that you're already familiar with.
+
+01:53.220 --> 01:56.000
+We're just looking at the syntax that Julia provides for this.
+
+01:56.870 --> 01:59.910
+But now we get to some of the stuff that is different in Julia.
+
+02:00.200 --> 02:06.590
+So, for instance, you can define One-Liner functions using this syntax of defining the function,
+
+02:06.590 --> 02:12.950
+name and parameters in parenthesis is equal to and then the one line of function body that is going
+
+02:12.950 --> 02:14.890
+to return the value of the function.
+
+02:14.900 --> 02:15.080
+Right.
+
+02:15.100 --> 02:17.860
+So it's much easier to just demonstrate this Sahaba.
+
+02:18.170 --> 02:19.790
+You can do X by two.
+
+02:19.940 --> 02:25.160
+If you run that, you get a function back, which is going to be called hover and it's going to take
+
+02:25.340 --> 02:26.500
+one argument.
+
+02:26.690 --> 02:30.720
+So another five is going to return obviously five by two, which is a rational number.
+
+02:30.740 --> 02:33.270
+So this body is going to be returned to you.
+
+02:33.530 --> 02:39.620
+So this is very useful when you have One-Liner functions and it makes your code look very similar to
+
+02:39.620 --> 02:43.520
+mathematics, which, as we saw in the previous video, is one of the objectives of Julias index.
+
+02:43.810 --> 02:51.080
+OK, whenever we have functions which try to modify stuff by convention, we append an exclamation mark
+
+02:51.230 --> 02:52.130
+to the function name.
+
+02:52.310 --> 02:53.370
+So we've seen this before.
+
+02:53.390 --> 02:55.850
+Let's go ahead and take a look at this again, just for the sake of completeness.
+
+02:55.850 --> 02:58.070
+So we have an array named V over here.
+
+02:58.460 --> 03:00.940
+We can go ahead and call this sort function on it.
+
+03:00.950 --> 03:04.030
+It's going to sort it, but you will notice that V remains the same.
+
+03:04.400 --> 03:08.360
+The reason for that is it does not mutate the variable that you pass to it.
+
+03:08.450 --> 03:08.770
+OK.
+
+03:09.500 --> 03:14.990
+However, there is a variation of sort which ends with a bang, and that is a mutating function, which
+
+03:14.990 --> 03:19.580
+means that if you pass, we do this start with a bang, it's going to actually modify.
+
+03:20.090 --> 03:21.670
+So this is very pervasive in Julia.
+
+03:21.800 --> 03:24.240
+Whenever you have functions which end with a bang.
+
+03:24.440 --> 03:27.300
+They are going to mutate or they may mutate your variables.
+
+03:27.320 --> 03:29.540
+OK, so that should be fairly straightforward.
+
+03:29.700 --> 03:32.320
+OK, we can also have overloaded methods.
+
+03:32.450 --> 03:36.410
+So this is slightly different from what you might be familiar with if you come from Python.
+
+03:38.060 --> 03:43.920
+This is very common in type languages such as Java and C++ and C, so let's explain this using an example.
+
+03:43.940 --> 03:49.220
+So you have a function called show number and it's going to print the value of the integer that you
+
+03:49.220 --> 03:53.950
+password, because I've just told you that this function is going to work on an integer.
+
+03:54.200 --> 03:59.680
+We can define the data type of the parameter as an integer 64, so a 64 bit integer.
+
+03:59.870 --> 04:03.760
+So the syntax for that is you say Escalon Colon in 64.
+
+04:03.770 --> 04:10.700
+So that means that this X can only hold an integer 64 or in 64, 64 word integer if you try to posit
+
+04:10.700 --> 04:11.190
+anything else.
+
+04:11.210 --> 04:13.510
+This is not going to work, so let's try and do that.
+
+04:13.760 --> 04:18.890
+So you define the function, you get the function back, you can call it using your number 65.
+
+04:19.190 --> 04:25.120
+This works perfectly well, but if you try to posit a float, this is not going to work because a a
+
+04:25.340 --> 04:26.510
+float is not an integer.
+
+04:26.660 --> 04:30.270
+So it cannot go into X because X has to be in 64.
+
+04:31.160 --> 04:34.970
+Moreover, float cannot be promoted to an integer.
+
+04:35.120 --> 04:35.380
+Right.
+
+04:35.450 --> 04:36.390
+So that's very important.
+
+04:36.650 --> 04:43.820
+If this was a if we had defined this X as a float and we had tried to posit an integer, that would
+
+04:43.820 --> 04:49.790
+have worked because integers can be promoted to floats, but floats are higher up in the hierarchy than
+
+04:49.790 --> 04:52.430
+integers, so they cannot be converted into integers automatically.
+
+04:52.440 --> 04:54.050
+So if you try to do that, you'll get an error.
+
+04:54.320 --> 04:58.250
+And it's very prudent right now to take a look at the errors.
+
+04:58.250 --> 05:02.720
+So the error says method error, no method matching show, no Kalanchoe don't float.
+
+05:03.260 --> 05:08.090
+So what this says is you're trying to call a function which is called show number and you're trying
+
+05:08.090 --> 05:09.320
+to pass a float to it.
+
+05:09.530 --> 05:13.820
+And there is no method that is available that accepts a float.
+
+05:14.240 --> 05:16.620
+No method names show number which accepts afloat.
+
+05:17.330 --> 05:19.900
+So what we can do is we can go ahead and define such a function.
+
+05:20.300 --> 05:26.270
+So now we are going to define another number and in it we are going to have the same number of arguments,
+
+05:26.270 --> 05:31.670
+which is X, except this time the data type of X is going to be a flawed 64.
+
+05:31.790 --> 05:32.120
+Right.
+
+05:32.450 --> 05:38.570
+So we can define this function and now we can call number with an integer, actual number with a float
+
+05:38.570 --> 05:38.950
+as well.
+
+05:39.170 --> 05:41.930
+And you will notice that these are two completely different functions.
+
+05:41.960 --> 05:47.390
+So this body has nothing to do with this body, even though the names of both the functions are the
+
+05:47.390 --> 05:47.660
+same.
+
+05:47.860 --> 05:55.370
+OK, so the first one is printing this and the second one is putting this, but they have the same name.
+
+05:55.940 --> 06:00.500
+The way this works in Judea is you have what are called functions.
+
+06:00.500 --> 06:03.950
+So show number is a function and it has two methods.
+
+06:04.100 --> 06:04.330
+Right.
+
+06:04.760 --> 06:08.480
+So show number has two methods for this generic function.
+
+06:08.730 --> 06:13.490
+No one takes a flawed 64 and the other takes in in 64.
+
+06:13.490 --> 06:13.750
+Right.
+
+06:14.420 --> 06:16.640
+This is called function overloading.
+
+06:16.640 --> 06:22.550
+If you come from Java or C++ or C or any of the strictly type languages, you would know what function
+
+06:22.550 --> 06:23.120
+overloading is.
+
+06:23.510 --> 06:28.910
+So this comes in very handy when you try to apply a function such as plus on different data types.
+
+06:29.070 --> 06:32.750
+So, for instance, adding two matrices has different logic.
+
+06:32.750 --> 06:34.400
+Adding two vectors has different logic.
+
+06:34.400 --> 06:36.340
+Adding to complex numbers has different logic.
+
+06:36.470 --> 06:40.850
+So all of these logics you don't have to worry about, all you will do is call the plus function and
+
+06:40.850 --> 06:43.640
+the methods are going to be automatically matched by Julia.
+
+06:44.030 --> 06:49.250
+So the reason for doing this is this speeds up the performance of the different function calls because
+
+06:49.700 --> 06:56.330
+you can specify different logic for different types of data that you can have.
+
+06:56.330 --> 06:59.150
+And that makes the life of the compiler very easy.
+
+06:59.150 --> 07:03.620
+And that, in turn means that your code is going to run much faster.
+
+07:03.870 --> 07:09.020
+So this is how internally Julia speeds things up and this is very important, but it's slightly advanced
+
+07:09.020 --> 07:09.260
+topics.
+
+07:09.260 --> 07:10.990
+So we're not going to go more into detail.
+
+07:11.000 --> 07:14.390
+I just show you the methods that are available for the generic function.
+
+07:14.390 --> 07:14.720
+Plus.
+
+07:15.110 --> 07:16.410
+So plus is simply a function.
+
+07:17.000 --> 07:18.700
+Nothing important going on over here.
+
+07:18.860 --> 07:21.180
+So plus I can work on two float's.
+
+07:21.200 --> 07:25.970
+It can work on two 16 because it can work on a complex boolean and a boolean.
+
+07:26.210 --> 07:29.960
+It can work with complex boolean and real, it can work even with two missing values.
+
+07:30.860 --> 07:35.000
+And there are a huge number of things that plus can do depending on the data type.
+
+07:35.180 --> 07:40.040
+And whenever you write plus for instance, two plus four, one of these is going to be hard and there
+
+07:40.040 --> 07:41.030
+is a hierarchy going on.
+
+07:41.040 --> 07:47.090
+So if you have a function which does not have a particular method for digitizer, a method in a higher
+
+07:47.090 --> 07:48.530
+level of the hierarchy can be.
+
+07:48.800 --> 07:50.870
+So for the moment, that's all that you need to understand.
+
+07:51.710 --> 07:56.840
+When we get to more details of this, we're going to take a look at the specifics of how they are implemented
+
+07:56.840 --> 07:58.820
+in machine learning and data science when we get to that.
+
+07:58.820 --> 07:59.000
+Right.
+
+07:59.020 --> 08:01.030
+So this is all you need to understand for the moment.
+
+08:01.790 --> 08:06.130
+So let's go ahead and take a look at some of the other concepts, such as default values.
+
+08:06.260 --> 08:08.770
+So let's again explain this using an example.
+
+08:08.780 --> 08:13.370
+So, for instance, if you call log of it, it's all by default in mathematics.
+
+08:13.370 --> 08:18.170
+Whenever you say log, you mean natural log rates, a log to the base e if you don't know what logs
+
+08:18.170 --> 08:19.310
+are, it's not really important.
+
+08:19.810 --> 08:22.700
+It's just a mathematical function that is very useful in a lot of things.
+
+08:22.970 --> 08:29.420
+But for the moment, all you need to understand is that this function actually has a hidden parameter
+
+08:29.420 --> 08:29.710
+in it.
+
+08:29.990 --> 08:33.160
+So log of it to the base of what?
+
+08:33.320 --> 08:37.010
+So that word by default is e so the mathematical constant.
+
+08:37.730 --> 08:42.170
+But you can change that, for instance, in computer science, we are usually concerned with lock to
+
+08:42.170 --> 08:47.180
+the base, too, so you can call log of the same number eight, but to the base, too, and this is
+
+08:47.180 --> 08:48.770
+going to give you three back.
+
+08:48.770 --> 08:49.030
+Right.
+
+08:49.070 --> 08:52.460
+So essentially, if you raise two to the three, you get eight.
+
+08:52.460 --> 08:55.220
+If you raise it to the two point or seven, you get eight.
+
+08:55.550 --> 08:56.600
+So that's how log works.
+
+08:56.750 --> 09:00.980
+So what we're trying to do over here is understand how this works, that the same function can work
+
+09:00.980 --> 09:02.930
+on different number of parameters.
+
+09:04.570 --> 09:10.930
+In the previous example, we saw how you can have a method for different data types and here we are
+
+09:10.930 --> 09:15.620
+taking a look at different methods for different number of parameters.
+
+09:15.670 --> 09:16.940
+OK, so that is how this works.
+
+09:16.960 --> 09:18.370
+These are called default values.
+
+09:18.700 --> 09:24.880
+So for that, let's take an example that we are going to pass a collection or a sequence of numbers
+
+09:25.090 --> 09:28.780
+to this collection log function, and it's going to calculate the log for all of these numbers.
+
+09:28.780 --> 09:29.070
+Right.
+
+09:29.260 --> 09:30.670
+So this index is fairly straightforward.
+
+09:30.680 --> 09:34.420
+You're going to pursue the collection and you're going to posit a base.
+
+09:34.960 --> 09:37.050
+And that base by default is going to be too.
+
+09:37.390 --> 09:37.600
+Right.
+
+09:37.970 --> 09:41.730
+You can call log base, i.e. for high end collections.
+
+09:41.730 --> 09:45.640
+So for all of the values that are passed, which you calculate the log to the base.
+
+09:46.330 --> 09:49.260
+So let's run this so we have a function, we can call this.
+
+09:49.270 --> 09:52.610
+We can see a collection log 48, 16 and do the best 10.
+
+09:52.900 --> 09:54.010
+So this is going to return.
+
+09:55.260 --> 10:00.420
+Forty six point nine and one point four, we can go ahead and commit DBAs, and this is going to now
+
+10:00.420 --> 10:02.070
+use the default value of two.
+
+10:02.370 --> 10:05.670
+So if you've come from Python, you would be familiar with these default values.
+
+10:06.030 --> 10:08.820
+But in Julia, there are slight differences.
+
+10:08.820 --> 10:11.050
+And that is what we're going to take a look at now.
+
+10:12.120 --> 10:18.690
+For instance, if you have base is equal to do over here, you cannot have a parameter that does not
+
+10:18.690 --> 10:20.230
+have a default value coming after.
+
+10:20.670 --> 10:24.600
+So all the parameters which have a default value have to go at the end.
+
+10:24.930 --> 10:25.240
+Right.
+
+10:25.440 --> 10:29.560
+So you have to change collection, comma, equal to as we defined over here.
+
+10:29.730 --> 10:31.190
+You cannot have them the other way around.
+
+10:31.470 --> 10:33.300
+If you try to do that, you're going to get an error.
+
+10:33.570 --> 10:36.460
+So optional positional arguments must occur at end.
+
+10:36.930 --> 10:38.070
+So it's fairly straightforward.
+
+10:38.430 --> 10:45.390
+However, if you do need optional parameters at the beginning, you can separate your positional arguments
+
+10:45.720 --> 10:47.730
+and your keyword based arguments.
+
+10:48.030 --> 10:52.290
+So you can have basically to do this is going to be a positional argument and this is going to be a
+
+10:52.290 --> 10:53.240
+keyword, this argument.
+
+10:53.250 --> 10:55.470
+So you can call this this works perfectly fine.
+
+10:55.650 --> 10:57.020
+Notice the difference here.
+
+10:57.030 --> 10:58.140
+We have a comma here.
+
+10:58.140 --> 10:59.180
+We have a semicolon.
+
+10:59.490 --> 11:01.530
+So these are now two different types.
+
+11:01.830 --> 11:03.090
+These are going to be positional.
+
+11:03.090 --> 11:05.870
+So you can pass them without having to refer to their name.
+
+11:06.150 --> 11:09.840
+But this collection over here now has to be passed using its name.
+
+11:10.230 --> 11:12.720
+So if you try to do this, this is going to give you an error.
+
+11:12.870 --> 11:18.580
+It says keyword argument collection is not a sign you might be expecting that basically to use default.
+
+11:18.600 --> 11:20.370
+So base is going to take on the value, too.
+
+11:20.490 --> 11:24.000
+And the only argument that I'm passing over here would go in collection.
+
+11:24.000 --> 11:25.350
+But that's not how Julia works.
+
+11:25.890 --> 11:30.090
+The way this works is anything after the semicolon has to be explicitly specified.
+
+11:30.100 --> 11:35.340
+So you have to say collection is equal to four, eight, 16, and now this is going to work perfectly
+
+11:35.340 --> 11:35.690
+fine.
+
+11:36.060 --> 11:37.980
+You can also pass then over here.
+
+11:37.990 --> 11:39.390
+So this is going to go into base.
+
+11:39.660 --> 11:41.360
+So everything works out perfectly well.
+
+11:41.820 --> 11:47.040
+I personally would not recommend that you try to do this in your own code, but I've covered this here
+
+11:47.040 --> 11:50.970
+because you are going to see other people's code, which is going to use this syntax.
+
+11:51.150 --> 11:55.740
+So you should be aware of this minor inconvenience of going from one language to another.
+
+11:55.920 --> 11:59.790
+So that's all you need to understand for now, as before, once you've covered all the syntax, we are
+
+11:59.790 --> 12:04.920
+going to take a look at applications of this in data science and machine learning, and this will become
+
+12:04.920 --> 12:05.590
+a lot more clear.
+
+12:05.830 --> 12:10.650
+OK, so in the next video, we are going to take a look at another type of functions which are very
+
+12:10.650 --> 12:11.580
+pervasive in Julia.
+
+12:11.730 --> 12:14.040
+And you might not have looked at them before.
+
+12:14.040 --> 12:16.880
+Even if you have, we have to take a look at how Julia approaches them.
+
+12:17.070 --> 12:19.290
+So let's take a look at that in the next video.
